@@ -1,0 +1,25 @@
+@import "./heading";
+@import "./hero";
+@import "./font";
+@import "./clients";
+@import "./why";
+@import "./offer";
+@import "./comments";
+@import "./hire-us";
+@import "./join";
+@import "./gallery";
+@import "./experience";
+@import "./contact";
+@import "./footer";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
+}

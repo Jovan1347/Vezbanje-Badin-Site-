@@ -1,0 +1,1316 @@
+.heading {
+  position: relative;
+  padding: 0px 5%;
+}
+
+.heading-content {
+  position: absolute;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading-content-button {
+  background: 0;
+  border: 0;
+}
+
+.heading-content img {
+  width: 98px;
+  height: 35px;
+}
+
+.burger1 {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+.burger2 {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+.burger3 {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+@font-face {
+  font-family: "futura-pt";
+  src: url("/fonts/FuturaPTBold.otf"), url("/fonts/FuturaPTBoldOblique.otf"), url("/fonts/FuturaPTBook.otf"), url("/fonts/FuturaPTBookOblique.otf"), url("/fonts/FuturaPTCondBold.otf"), url("/fonts/FuturaPTCondBoldOblique.otf"), url("/fonts/FuturaPTCondBook.otf"), url("/fonts/FuturaPTCondBookOblique.otf"), url("/fonts/FuturaPTCondExtraBold.otf"), url("/fonts/FuturaPTCondExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTHeavy.otf"), url("/fonts/FuturaPTHeavyOblique.otf"), url("/fonts/FuturaPTLight.otf"), url("/fonts/FuturaPTLightOblique.otf"), url("/fonts/FuturaPTMedium.otf"), url("/fonts/FuturaPTMediumOblique.otf");
+}
+@font-face {
+  font-family: "lust";
+  src: url("/fonts/lust-slim.ttf");
+}
+.hero {
+  padding: 150px 5%;
+  padding-bottom: unset;
+  background-image: url("/images/header-hero/hero-bg.png");
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: 100% 100%;
+}
+.hero .hero-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.hero .hero-text {
+  margin-bottom: 84px;
+  z-index: 2;
+}
+.hero .hero-text-title h1 {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3em;
+  color: white;
+  margin-bottom: 32px;
+}
+.hero .hero-text-paragraph {
+  margin-bottom: 2em;
+}
+.hero .hero-text-paragraph p {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  color: white;
+  opacity: 0.5;
+}
+.hero .hero-text-button {
+  display: flex;
+  flex-direction: column;
+}
+.hero .hero-image {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  position: relative;
+  z-index: 1;
+  margin-top: -84px;
+}
+.hero .hero-image-net {
+  position: absolute;
+  bottom: 0;
+  opacity: 0.5;
+}
+
+.button-what-we-do {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 40px;
+  border: none;
+  margin-bottom: 24px;
+}
+
+.button-life-at-badin {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 40px;
+  border: none;
+  background-color: #393939;
+}
+
+.button-what-we-do a {
+  color: #22252e;
+  text-decoration: none;
+}
+
+.button-what-we-do:hover {
+  background-color: #cfcfcf;
+  transition: 0.5s;
+}
+
+.button-life-at-badin a {
+  color: white;
+  text-decoration: none;
+}
+
+.button-life-at-badin:hover {
+  background-color: #242324;
+  transition: 0.5s;
+}
+
+.hero-image-net img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-hero-planet {
+  position: absolute;
+  width: 50px;
+  left: 20%;
+  bottom: 200px;
+  z-index: 1;
+}
+
+.header-hero-white {
+  position: absolute;
+  right: -40%;
+  bottom: -1%;
+  width: 100%;
+}
+
+.header-hero-tower1 {
+  position: absolute;
+  z-index: 1;
+  width: 70px;
+  bottom: -60px;
+  left: 5px;
+}
+
+.header-hero-big {
+  width: 450px;
+  position: absolute;
+  right: -100px;
+  bottom: -15%;
+}
+
+.header-hero-tower2 {
+  position: absolute;
+  width: 60px;
+  bottom: -1%;
+  right: -3px;
+}
+
+@media all and (min-width: 1280px) {
+  .hero .hero-container {
+    flex-direction: row;
+  }
+  .hero .hero-text-title h1 {
+    font-size: 5em;
+  }
+  .hero .hero-text-paragraph p {
+    font-size: 1.37em;
+    line-height: 1.5;
+  }
+  .hero .hero-text-button {
+    flex-direction: row;
+    width: 65%;
+    justify-content: space-between;
+  }
+  .hero .hero-image {
+    margin-top: 168px;
+    position: relative;
+  }
+  .hero .hero-image-net {
+    bottom: 0;
+    right: -5%;
+    height: 200%;
+    width: 100%;
+  }
+  .button-what-we-do {
+    padding: 10px 20px;
+    margin-bottom: unset;
+    width: 180px;
+  }
+  .button-life-at-badin {
+    padding: 10px 20px;
+    width: 180px;
+  }
+  .header-hero-planet {
+    bottom: 90%;
+  }
+  .header-hero-white {
+    right: -45%;
+  }
+  .header-hero-tower1 {
+    width: 15%;
+  }
+  .header-hero-tower2 {
+    width: 13%;
+  }
+  .header-hero-big {
+    width: 100%;
+    right: -20%;
+  }
+}
+@font-face {
+  font-family: "futura-pt";
+  src: url("/fonts/FuturaPTBold.otf"), url("/fonts/FuturaPTBoldOblique.otf"), url("/fonts/FuturaPTBook.otf"), url("/fonts/FuturaPTBookOblique.otf"), url("/fonts/FuturaPTCondBold.otf"), url("/fonts/FuturaPTCondBoldOblique.otf"), url("/fonts/FuturaPTCondBook.otf"), url("/fonts/FuturaPTCondBookOblique.otf"), url("/fonts/FuturaPTCondExtraBold.otf"), url("/fonts/FuturaPTCondExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTHeavy.otf"), url("/fonts/FuturaPTHeavyOblique.otf"), url("/fonts/FuturaPTLight.otf"), url("/fonts/FuturaPTLightOblique.otf"), url("/fonts/FuturaPTMedium.otf"), url("/fonts/FuturaPTMediumOblique.otf");
+}
+@font-face {
+  font-family: "lust";
+  src: url("/fonts/lust-slim.ttf");
+}
+.clients {
+  display: flex;
+  justify-content: center;
+  padding: 100px 5%;
+}
+
+.clients-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.clients-container img {
+  width: 200px;
+  padding: 10px;
+}
+
+@media all and (min-width: 1280px) {
+  .clients-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .clients-container-img11 {
+    grid-column: 2/3;
+  }
+  .clients-container-img12 {
+    grid-column: 3/3;
+  }
+  .clients-container-img13 {
+    grid-column: 4/4;
+  }
+}
+@font-face {
+  font-family: "futura-pt";
+  src: url("/fonts/FuturaPTBold.otf"), url("/fonts/FuturaPTBoldOblique.otf"), url("/fonts/FuturaPTBook.otf"), url("/fonts/FuturaPTBookOblique.otf"), url("/fonts/FuturaPTCondBold.otf"), url("/fonts/FuturaPTCondBoldOblique.otf"), url("/fonts/FuturaPTCondBook.otf"), url("/fonts/FuturaPTCondBookOblique.otf"), url("/fonts/FuturaPTCondExtraBold.otf"), url("/fonts/FuturaPTCondExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTHeavy.otf"), url("/fonts/FuturaPTHeavyOblique.otf"), url("/fonts/FuturaPTLight.otf"), url("/fonts/FuturaPTLightOblique.otf"), url("/fonts/FuturaPTMedium.otf"), url("/fonts/FuturaPTMediumOblique.otf");
+}
+@font-face {
+  font-family: "lust";
+  src: url("/fonts/lust-slim.ttf");
+}
+.why {
+  padding: 0 5%;
+  padding-bottom: 100px;
+}
+
+.why-badin-item-container .why-badin-item-text h2 {
+  font-family: lust, "Courier", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 3em;
+  color: #22252e;
+  margin: 32px 0;
+}
+.why-badin-item-container .why-badin-item-text p {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1em;
+  color: #4e5158;
+  margin: 50px 0;
+}
+.why-badin-item-container .why-badin-item-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: #888888 10px 10px 15px;
+}
+.why-badin-item-container .why-badin-item-container-inv-pic img {
+  display: none;
+}
+
+@media all and (min-width: 1280px) {
+  .why {
+    padding-bottom: 100px;
+  }
+  .why-badin-item-container .why-badin-item-container-inv-pic {
+    width: 70%;
+    padding-bottom: 100px;
+  }
+  .why-badin-item-container .why-badin-item-container-inv-pic img {
+    border-radius: 20px;
+    box-shadow: #888888 10px 10px 15px;
+    width: 100%;
+    display: unset;
+  }
+  .why-badin-item-container .why-badin-item-text-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  .why-badin-item-container .why-badin-item-text-title h2 {
+    width: 25%;
+    font-size: 5.6em;
+    margin-top: 0;
+  }
+  .why-badin-item-container .why-badin-item-text-title p {
+    font-size: 1.25em;
+    width: 70%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .why-badin-item-text-image-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .why-badin-item-text-image-wrapper .why-badin-item-text-image-wrapper-paragraph {
+    width: 70%;
+    margin-right: 100px;
+    font-size: 1.25em;
+  }
+}
+@font-face {
+  font-family: "futura-pt";
+  src: url("/fonts/FuturaPTBold.otf"), url("/fonts/FuturaPTBoldOblique.otf"), url("/fonts/FuturaPTBook.otf"), url("/fonts/FuturaPTBookOblique.otf"), url("/fonts/FuturaPTCondBold.otf"), url("/fonts/FuturaPTCondBoldOblique.otf"), url("/fonts/FuturaPTCondBook.otf"), url("/fonts/FuturaPTCondBookOblique.otf"), url("/fonts/FuturaPTCondExtraBold.otf"), url("/fonts/FuturaPTCondExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTHeavy.otf"), url("/fonts/FuturaPTHeavyOblique.otf"), url("/fonts/FuturaPTLight.otf"), url("/fonts/FuturaPTLightOblique.otf"), url("/fonts/FuturaPTMedium.otf"), url("/fonts/FuturaPTMediumOblique.otf");
+}
+@font-face {
+  font-family: "lust";
+  src: url("/fonts/lust-slim.ttf");
+}
+.offer {
+  padding: 50px 5%;
+  background-color: #f9fafe;
+}
+
+.offer-info .offer-info-text h2 {
+  font-family: lust, "Courier", serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #22252e;
+  font-size: 3em;
+  margin-bottom: 32px;
+}
+.offer-info .offer-info-text p {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #4e5158;
+  margin: 30px 0;
+  font-size: 1em;
+}
+.offer-info .offer-info-button button {
+  background-color: #317ade;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 33px;
+}
+.offer-info .offer-info-button button:hover {
+  background-color: #314ade;
+  transition: 0.5s;
+}
+.offer-info .offer-info-button a {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.25em;
+}
+
+.offer-product {
+  margin: 50px 0 0;
+}
+.offer-product .offer-product-wrapper1 {
+  margin-bottom: 50px;
+  transition: transform 0.2s;
+}
+.offer-product .offer-product-wrapper1:hover {
+  transform: scale(1.1);
+}
+.offer-product .offer-product-wrapper1:hover h2 {
+  color: #317ade;
+  transition: 0.5s;
+}
+.offer-product .offer-product-wrapper1 p {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1em;
+  color: #317ade;
+  margin-bottom: 10px;
+}
+.offer-product .offer-product-wrapper1 h2 {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+.offer-product .offer-product-wrapper-icons img {
+  margin-bottom: 20px;
+  width: 40px;
+  aspect-ratio: 1/1;
+}
+.offer-product .offer-product-wrapper-image img {
+  width: 160px;
+  height: 250px;
+}
+.offer-product .offer-product-wrapper2 {
+  margin-bottom: 50px;
+  transition: transform 0.2s;
+}
+.offer-product .offer-product-wrapper2 .offer-product-wrapper-image img {
+  width: 275px;
+  height: 250px;
+}
+.offer-product .offer-product-wrapper2:hover {
+  transform: scale(1.1);
+}
+.offer-product .offer-product-wrapper2:hover h2 {
+  color: #ed701d;
+  transition: 0.5s;
+}
+.offer-product .offer-product-wrapper2 p {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1em;
+  color: #ed701d;
+  margin-bottom: 10px;
+}
+.offer-product .offer-product-wrapper2 h2 {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+.offer-product .offer-product-wrapper3 {
+  transition: transform 0.2s;
+}
+.offer-product .offer-product-wrapper3 .offer-product-wrapper-image img {
+  width: 250px;
+  height: 310px;
+}
+.offer-product .offer-product-wrapper3:hover {
+  transform: scale(1.1);
+}
+.offer-product .offer-product-wrapper3:hover h2 {
+  color: #1ebf73;
+  transition: 0.5s;
+}
+.offer-product .offer-product-wrapper3 p {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1em;
+  color: #1ebf73;
+  margin-bottom: 10px;
+}
+.offer-product .offer-product-wrapper3 h2 {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+
+@media all and (min-width: 1280px) {
+  .offer {
+    padding: 100px 5%;
+  }
+  .offer-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  .offer-info .offer-info-text {
+    width: 50%;
+  }
+  .offer-info .offer-info-text h2 {
+    font-size: 4.3em;
+  }
+  .offer-info .offer-info-text p {
+    font-size: 1.25em;
+  }
+  .offer-product {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .offer-product .offer-product-wrapper1 {
+    width: 30%;
+  }
+  .offer-product .offer-product-wrapper2 {
+    width: 30%;
+  }
+  .offer-product .offer-product-wrapper3 {
+    width: 30%;
+    margin-bottom: 50px;
+  }
+}
+@font-face {
+  font-family: "futura-pt";
+  src: url("/fonts/FuturaPTBold.otf"), url("/fonts/FuturaPTBoldOblique.otf"), url("/fonts/FuturaPTBook.otf"), url("/fonts/FuturaPTBookOblique.otf"), url("/fonts/FuturaPTCondBold.otf"), url("/fonts/FuturaPTCondBoldOblique.otf"), url("/fonts/FuturaPTCondBook.otf"), url("/fonts/FuturaPTCondBookOblique.otf"), url("/fonts/FuturaPTCondExtraBold.otf"), url("/fonts/FuturaPTCondExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTHeavy.otf"), url("/fonts/FuturaPTHeavyOblique.otf"), url("/fonts/FuturaPTLight.otf"), url("/fonts/FuturaPTLightOblique.otf"), url("/fonts/FuturaPTMedium.otf"), url("/fonts/FuturaPTMediumOblique.otf");
+}
+@font-face {
+  font-family: "lust";
+  src: url("/fonts/lust-slim.ttf");
+}
+.comments {
+  padding: 0 5%;
+  padding-bottom: 100px;
+  background-color: #f9fafe;
+}
+
+.comments-title {
+  font-family: lust, "Courier", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2.25em;
+  margin-bottom: 24px;
+}
+
+.comments-paragraph {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.125em;
+  color: #4e5158;
+  margin-bottom: 24px;
+}
+
+.comments-clients {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 24px;
+}
+.comments-clients .comments-clients-1 img {
+  width: 70px;
+}
+.comments-clients .comments-clients-2 img {
+  width: 70px;
+}
+.comments-clients .comments-clients-3 img {
+  width: 70px;
+}
+.comments-clients .comments-clients-4 img {
+  width: 70px;
+}
+.comments-clients .comments-clients-5 img {
+  width: 70px;
+}
+
+.comments-testimonial .comments-testimonial-name {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 24px;
+}
+.comments-testimonial .comments-testimonial-name h3 {
+  font-size: 1.5em;
+}
+.comments-testimonial .comments-testimonial-name p {
+  font-size: 1em;
+  color: #4e5158;
+}
+.comments-testimonial .comments-testimonial-content p {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.125em;
+}
+
+@media all and (min-width: 1280px) {
+  .comments-title {
+    font-size: 4em;
+    text-align: center;
+  }
+  .comments-paragraph {
+    width: 40%;
+    margin-bottom: 50px;
+  }
+  .comments-clients-and-testimonials {
+    display: flex;
+    flex-direction: row;
+  }
+  .comments-clients-and-testimonials .comments-clients {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 40%;
+  }
+  .comments-clients-and-testimonials .comments-testimonial {
+    width: 50%;
+  }
+  .comments-timeline {
+    width: 3px;
+    height: 260px;
+    background-color: #4e5158;
+    margin: 0 10px;
+  }
+}
+@font-face {
+  font-family: "futura-pt";
+  src: url("/fonts/FuturaPTBold.otf"), url("/fonts/FuturaPTBoldOblique.otf"), url("/fonts/FuturaPTBook.otf"), url("/fonts/FuturaPTBookOblique.otf"), url("/fonts/FuturaPTCondBold.otf"), url("/fonts/FuturaPTCondBoldOblique.otf"), url("/fonts/FuturaPTCondBook.otf"), url("/fonts/FuturaPTCondBookOblique.otf"), url("/fonts/FuturaPTCondExtraBold.otf"), url("/fonts/FuturaPTCondExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTHeavy.otf"), url("/fonts/FuturaPTHeavyOblique.otf"), url("/fonts/FuturaPTLight.otf"), url("/fonts/FuturaPTLightOblique.otf"), url("/fonts/FuturaPTMedium.otf"), url("/fonts/FuturaPTMediumOblique.otf");
+}
+@font-face {
+  font-family: "lust";
+  src: url("/fonts/lust-slim.ttf");
+}
+.hire-us {
+  padding: 50px 0;
+  padding-bottom: 0;
+}
+.hire-us .hire-us-container {
+  display: flex;
+  flex-direction: column;
+}
+.hire-us .hire-us-container .hire-us-container-text {
+  padding: 0 5%;
+  margin-bottom: 30px;
+}
+.hire-us .hire-us-container .hire-us-heading-back {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2em;
+  color: #e6e7e8;
+  margin-bottom: -25px;
+}
+.hire-us .hire-us-container .hire-us-heading {
+  font-family: lust, "Courier", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2em;
+  color: #22252e;
+}
+.hire-us .hire-us-container .hire-us-paragraph {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1em;
+  color: #4e5158;
+}
+.hire-us .hire-us-container .hire-us-button button {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 1em;
+  background-color: #317ade;
+  border: none;
+  border-radius: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 25px;
+  margin-top: 30px;
+}
+.hire-us .hire-us-container .hire-us-button button:hover {
+  background-color: #314ade;
+  transition: 0.5s;
+}
+.hire-us .hire-us-container .hire-us-container-trusted {
+  text-align: center;
+  background-color: #f9fafe;
+  padding: 50px 0;
+}
+.hire-us .hire-us-container .hire-us-container-trusted p {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #4e5158;
+}
+.hire-us .hire-us-container .hire-us-container-trusted-clients {
+  display: flex;
+  margin-top: 25px;
+  overflow: hidden;
+  position: relative;
+}
+.hire-us .hire-us-container .hire-us-container-trusted-clients img {
+  width: 150px;
+  position: relative;
+  -webkit-animation: move 15s infinite;
+          animation: move 15s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes move {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 2250px;
+  }
+}
+
+@keyframes move {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 2250px;
+  }
+}
+@media all and (min-width: 1280px) {
+  .hire-us .hire-us-container .hire-us-container-text {
+    width: 50%;
+  }
+  .hire-us .hire-us-container .hire-us-heading-back {
+    font-size: 2.5em;
+    margin-bottom: -35px;
+  }
+  .hire-us .hire-us-container .hire-us-heading {
+    font-size: 2.5em;
+  }
+  .hire-us .hire-us-container .hire-us-paragraph {
+    font-size: 1.5em;
+  }
+  .hire-us .hire-us-container .hire-us-button button:hover {
+    transition: 0.5s;
+    background-color: #314ade;
+  }
+}
+@font-face {
+  font-family: "futura-pt";
+  src: url("/fonts/FuturaPTBold.otf"), url("/fonts/FuturaPTBoldOblique.otf"), url("/fonts/FuturaPTBook.otf"), url("/fonts/FuturaPTBookOblique.otf"), url("/fonts/FuturaPTCondBold.otf"), url("/fonts/FuturaPTCondBoldOblique.otf"), url("/fonts/FuturaPTCondBook.otf"), url("/fonts/FuturaPTCondBookOblique.otf"), url("/fonts/FuturaPTCondExtraBold.otf"), url("/fonts/FuturaPTCondExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTHeavy.otf"), url("/fonts/FuturaPTHeavyOblique.otf"), url("/fonts/FuturaPTLight.otf"), url("/fonts/FuturaPTLightOblique.otf"), url("/fonts/FuturaPTMedium.otf"), url("/fonts/FuturaPTMediumOblique.otf");
+}
+@font-face {
+  font-family: "lust";
+  src: url("/fonts/lust-slim.ttf");
+}
+.join {
+  padding: 100px 5%;
+  background-color: #f9fafe;
+}
+.join .join-container .join-container-heading-back {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2em;
+  color: #e6e7e8;
+  margin-bottom: -25px;
+}
+.join .join-container .join-container-heading {
+  font-family: lust, "Courier", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2em;
+  color: #22252e;
+}
+.join .join-container .join-container-button {
+  display: flex;
+  justify-content: center;
+}
+.join .join-container .join-container-button button {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #000000;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+}
+.join .join-container .join-container-button button:hover {
+  background-color: #22252e;
+  transition: 0.5s;
+}
+.join .join-container-career {
+  margin-top: 50px;
+}
+.join .join-container-career .join-container-career-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 5%;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 25px 0;
+  border-radius: 10px;
+  box-shadow: #9b9c9e 1px 5px 20px;
+}
+.join .join-container-career .career-card-text {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1em;
+  color: #22252e;
+  margin-bottom: 20px;
+}
+.join .join-container-career .career-card-button button {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #317ade;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: 150px;
+}
+.join .join-container-career .career-card-button button:hover {
+  background-color: #314ade;
+  transition: 0.5s;
+}
+
+@media all and (min-width: 1280px) {
+  .join .join-container .join-container-heading-back {
+    font-size: 3.5em;
+    margin-bottom: -35px;
+  }
+  .join .join-container .join-container-heading {
+    font-size: 3.5em;
+  }
+  .join .join-container .join-container-button button {
+    font-size: 1.5em;
+    border-radius: 30px;
+  }
+  .join .join-container-career .join-container-career-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+  }
+  .join .join-container-career .career-card-text {
+    font-size: 1.75em;
+    margin: unset;
+  }
+}
+.gallery {
+  padding: 100px 5%;
+  background-color: #ffffff;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.inv-picture {
+  display: none;
+}
+
+.gallery-div1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery-div1 img {
+  height: 30%;
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 20px;
+  border-radius: 20px;
+}
+
+.gallery-div2 {
+  display: flex;
+  align-items: center;
+}
+.gallery-div2 img {
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 5px 5px 20px;
+  margin-bottom: 30px;
+}
+
+.gallery-div3 {
+  background-color: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery-div3 img {
+  height: 30%;
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 20px;
+  border-radius: 20px;
+}
+
+@media all and (min-width: 1280px) {
+  .gallery-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .inv-picture {
+    display: unset;
+  }
+  .gallery-div1 {
+    width: 30%;
+    position: relative;
+    -webkit-animation: mymove 1s forwards ease;
+            animation: mymove 1s forwards ease;
+  }
+  .gallery-div2 {
+    width: 30%;
+  }
+  .gallery-div3 {
+    width: 30%;
+    justify-content: space-around;
+    position: relative;
+    -webkit-animation: mymove 1s forwards ease;
+            animation: mymove 1s forwards ease;
+  }
+  @-webkit-keyframes mymove {
+    from {
+      bottom: -110px;
+    }
+    to {
+      bottom: 0px;
+    }
+  }
+  @keyframes mymove {
+    from {
+      bottom: -110px;
+    }
+    to {
+      bottom: 0px;
+    }
+  }
+}
+@font-face {
+  font-family: "futura-pt";
+  src: url("/fonts/FuturaPTBold.otf"), url("/fonts/FuturaPTBoldOblique.otf"), url("/fonts/FuturaPTBook.otf"), url("/fonts/FuturaPTBookOblique.otf"), url("/fonts/FuturaPTCondBold.otf"), url("/fonts/FuturaPTCondBoldOblique.otf"), url("/fonts/FuturaPTCondBook.otf"), url("/fonts/FuturaPTCondBookOblique.otf"), url("/fonts/FuturaPTCondExtraBold.otf"), url("/fonts/FuturaPTCondExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTHeavy.otf"), url("/fonts/FuturaPTHeavyOblique.otf"), url("/fonts/FuturaPTLight.otf"), url("/fonts/FuturaPTLightOblique.otf"), url("/fonts/FuturaPTMedium.otf"), url("/fonts/FuturaPTMediumOblique.otf");
+}
+@font-face {
+  font-family: "lust";
+  src: url("/fonts/lust-slim.ttf");
+}
+.experience .experience-container {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: left;
+  background: linear-gradient(274deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 38%, rgb(0, 212, 255) 100%);
+  color: white;
+}
+.experience .experience-container .experience-container-text {
+  font-family: lust, "Courier", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2em;
+  width: 70%;
+  margin-bottom: 50px;
+  padding: 0px 20px;
+}
+.experience .experience-container .experience-slider1 {
+  display: flex;
+  gap: 25px;
+  margin: 30px 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  overflow: hidden;
+  position: relative;
+}
+.experience .experience-container .experience-slider1 .tech {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5em;
+  white-space: nowrap;
+  opacity: 60%;
+  position: relative;
+  -webkit-animation: moving 40s infinite alternate;
+          animation: moving 40s infinite alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.experience .experience-container .experience-slider2 {
+  display: flex;
+  gap: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px 0;
+  overflow: hidden;
+  position: relative;
+}
+.experience .experience-container .experience-slider2 .tech {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5em;
+  white-space: nowrap;
+  opacity: 60%;
+  position: relative;
+  animation: moving 40s infinite alternate-reverse;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.experience .experience-container .experience-slider3 {
+  display: flex;
+  gap: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px 0;
+  overflow: hidden;
+  position: relative;
+}
+.experience .experience-container .experience-slider3 .tech {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5em;
+  white-space: nowrap;
+  opacity: 60%;
+  position: relative;
+  -webkit-animation: moving 40s infinite alternate;
+          animation: moving 40s infinite alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.experience .experience-container .experience-slider4 {
+  display: flex;
+  gap: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px 0;
+  overflow: hidden;
+  position: relative;
+}
+.experience .experience-container .experience-slider4 .tech {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5em;
+  white-space: nowrap;
+  opacity: 60%;
+  position: relative;
+  animation: moving 40s infinite alternate-reverse;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+@-webkit-keyframes moving {
+  from {
+    right: 0;
+  }
+  to {
+    right: 4879.125px;
+  }
+}
+@keyframes moving {
+  from {
+    right: 0;
+  }
+  to {
+    right: 4879.125px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .experience .experience-container {
+    padding-bottom: 30px;
+    align-items: center;
+  }
+  .experience .experience-container .experience-container-text {
+    width: unset;
+    font-size: 2.5em;
+  }
+  .experience .experience-container .mobile {
+    display: none;
+  }
+}
+@font-face {
+  font-family: "futura-pt";
+  src: url("/fonts/FuturaPTBold.otf"), url("/fonts/FuturaPTBoldOblique.otf"), url("/fonts/FuturaPTBook.otf"), url("/fonts/FuturaPTBookOblique.otf"), url("/fonts/FuturaPTCondBold.otf"), url("/fonts/FuturaPTCondBoldOblique.otf"), url("/fonts/FuturaPTCondBook.otf"), url("/fonts/FuturaPTCondBookOblique.otf"), url("/fonts/FuturaPTCondExtraBold.otf"), url("/fonts/FuturaPTCondExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTHeavy.otf"), url("/fonts/FuturaPTHeavyOblique.otf"), url("/fonts/FuturaPTLight.otf"), url("/fonts/FuturaPTLightOblique.otf"), url("/fonts/FuturaPTMedium.otf"), url("/fonts/FuturaPTMediumOblique.otf");
+}
+@font-face {
+  font-family: "lust";
+  src: url("/fonts/lust-slim.ttf");
+}
+.contact-us .contact-us-container {
+  padding: 100px 5%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-us .contact-us-text {
+  width: 90%;
+}
+.contact-us .contact-us-text .contact-us-heading-back {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2em;
+  color: #e6e7e8;
+  margin-bottom: -25px;
+}
+.contact-us .contact-us-text .contact-us-heading {
+  font-family: lust, "Courier", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2em;
+  color: #22252e;
+  margin-bottom: 30px;
+}
+.contact-us .contact-us-text .contact-us-info a {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #000000;
+  font-size: 1.75em;
+}
+.contact-us .contact-us-image {
+  margin-top: 50px;
+  width: 90%;
+}
+.contact-us .contact-us-image img {
+  width: 100%;
+}
+
+@media all and (min-width: 1280px) {
+  .contact-us .contact-us-container {
+    padding: 50px 5%;
+    align-content: center;
+    flex-direction: row;
+  }
+  .contact-us .contact-us-text {
+    width: 70%;
+  }
+  .contact-us .contact-us-text .contact-us-heading-back {
+    font-size: 2.5em;
+  }
+  .contact-us .contact-us-text .contact-us-heading {
+    font-size: 2.5em;
+  }
+  .contact-us .contact-us-text .contact-us-info a {
+    font-size: 2.5em;
+  }
+  .contact-us .contact-us-image {
+    width: 20%;
+  }
+}
+@font-face {
+  font-family: "futura-pt";
+  src: url("/fonts/FuturaPTBold.otf"), url("/fonts/FuturaPTBoldOblique.otf"), url("/fonts/FuturaPTBook.otf"), url("/fonts/FuturaPTBookOblique.otf"), url("/fonts/FuturaPTCondBold.otf"), url("/fonts/FuturaPTCondBoldOblique.otf"), url("/fonts/FuturaPTCondBook.otf"), url("/fonts/FuturaPTCondBookOblique.otf"), url("/fonts/FuturaPTCondExtraBold.otf"), url("/fonts/FuturaPTCondExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTCondMedium.otf"), url("/fonts/FuturaPTCondMediumOblique.otf"), url("/fonts/FuturaPTDemi.otf"), url("/fonts/FuturaPTDemiOblique.otf"), url("/fonts/FuturaPTExtraBold.otf"), url("/fonts/FuturaPTExtraBoldOblique.otf"), url("/fonts/FuturaPTHeavy.otf"), url("/fonts/FuturaPTHeavyOblique.otf"), url("/fonts/FuturaPTLight.otf"), url("/fonts/FuturaPTLightOblique.otf"), url("/fonts/FuturaPTMedium.otf"), url("/fonts/FuturaPTMediumOblique.otf");
+}
+@font-face {
+  font-family: "lust";
+  src: url("/fonts/lust-slim.ttf");
+}
+.footer {
+  background-color: #22252e;
+}
+.footer .footer-container {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 50px 5%;
+  padding-bottom: 0;
+  color: #e6e7e8;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer-container .footer-container-social {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.footer .footer-container .footer-container-social .footer-container-social-logo {
+  width: 100px;
+  margin-bottom: 30px;
+}
+.footer .footer-container .footer-container-social .footer-container-social-logo img {
+  width: 100%;
+}
+.footer .footer-container .footer-container-social .footer-container-social-text {
+  font-size: 1em;
+  margin-bottom: 30px;
+  color: #999999;
+}
+.footer .footer-container .footer-container-social .footer-container-social-icons {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer-container .footer-container-social .yt {
+  margin-bottom: -20px;
+}
+.footer .footer-container .footer-container-social .footer-container-social-icons img {
+  width: 40px;
+}
+.footer .footer-container .footer-container-navigation ul {
+  margin-top: 20px;
+  list-style: none;
+  color: #999999;
+  margin-bottom: 25px;
+}
+.footer .footer-container .footer-container-navigation li {
+  padding: 3px;
+}
+.footer .footer-container .footer-container-contact h2 {
+  margin-bottom: 20px;
+}
+.footer .footer-container .footer-container-contact a {
+  color: #999999;
+  text-decoration: none;
+}
+.footer .footer-container .footer-container-contact p {
+  color: #999999;
+}
+.footer .footer-bottom {
+  padding: 0 5%;
+  background-color: #22252e;
+}
+.footer .footer-bottom .footer-bottom-container {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  color: #999999;
+  font-size: 1em;
+  padding: 30px 0;
+  border-top: 1px solid #999999;
+}
+
+@media all and (min-width: 1280px) {
+  .footer .footer-container {
+    margin: 0 auto;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer .footer-container .footer-container-social {
+    width: 50%;
+  }
+  .footer .footer-container .footer-container-social-icons {
+    width: 20%;
+  }
+  .footer .footer-bottom {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}/*# sourceMappingURL=main.css.map */

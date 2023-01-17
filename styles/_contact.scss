@@ -1,0 +1,71 @@
+@import "./font";
+
+.contact-us {
+  #{&}-container {
+    padding: 100px 5%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #{&}-text {
+    width: 90%;
+    .contact-us-heading-back {
+      @include font-primary-medium;
+      font-size: 2em;
+      color: #e6e7e8;
+      margin-bottom: -25px;
+    }
+
+    .contact-us-heading {
+      @include font-secondary-italic;
+      font-size: 2em;
+      color: #22252e;
+      margin-bottom: 30px;
+    }
+
+    .contact-us-info a {
+      @include font-primary-medium;
+      color: #000000;
+      font-size: 1.75em;
+    }
+  }
+
+  #{&}-image {
+    margin-top: 50px;
+    width: 90%;
+  }
+
+  .contact-us-image img {
+    width: 100%;
+  }
+}
+
+@media all and(min-width:1280px) {
+  .contact-us {
+    #{&}-container {
+      padding: 50px 5%;
+      align-content: center;
+      flex-direction: row;
+    }
+
+    #{&}-text {
+      width: 70%;
+
+      .contact-us-heading-back {
+        font-size: 2.5em;
+      }
+
+      .contact-us-heading {
+        font-size: 2.5em;
+      }
+
+      .contact-us-info a {
+        font-size: 2.5em;
+      }
+    }
+
+    #{&}-image {
+      width: 20%;
+    }
+  }
+}

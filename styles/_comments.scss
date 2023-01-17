@@ -1,0 +1,99 @@
+@import "./font";
+
+.comments {
+  padding: 0 5%;
+  padding-bottom: 100px;
+  background-color: #f9fafe;
+}
+
+.comments-title {
+  @include font-secondary-italic;
+  font-size: 2.25em;
+  margin-bottom: 24px;
+}
+
+.comments-paragraph {
+  @include font-primary-medium;
+  font-size: 1.125em;
+  color: #4e5158;
+  margin-bottom: 24px;
+}
+
+.comments-clients {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 24px;
+
+  #{&}-1 img {
+    width: 70px;
+  }
+
+  #{&}-2 img {
+    width: 70px;
+  }
+
+  #{&}-3 img {
+    width: 70px;
+  }
+
+  #{&}-4 img {
+    width: 70px;
+  }
+
+  #{&}-5 img {
+    width: 70px;
+  }
+}
+
+.comments-testimonial {
+  #{&}-name {
+    @include font-primary-medium;
+    margin-bottom: 24px;
+  }
+
+  #{&}-name h3 {
+    font-size: 1.5em;
+  }
+
+  #{&}-name p {
+    font-size: 1em;
+    color: #4e5158;
+  }
+  #{&}-content p {
+    @include font-primary-medium-italic;
+    font-size: 1.125em;
+  }
+}
+
+@media all and(min-width:1280px) {
+  .comments-title {
+    font-size: 4em;
+    text-align: center;
+  }
+
+  .comments-paragraph {
+    width: 40%;
+    margin-bottom: 50px;
+  }
+
+  .comments-clients-and-testimonials {
+    display: flex;
+    flex-direction: row;
+
+    .comments-clients {
+      display: grid;
+      grid-template-columns: auto auto;
+      width: 40%;
+    }
+    .comments-testimonial {
+      width: 50%;
+    }
+  }
+
+  .comments-timeline {
+    width: 3px;
+    height: 260px;
+    background-color: #4e5158;
+    margin: 0 10px;
+  }
+}

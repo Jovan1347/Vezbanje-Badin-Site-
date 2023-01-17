@@ -1,0 +1,43 @@
+@mixin burger {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+.heading {
+  position: relative;
+  padding: 0px 5%;
+}
+
+.heading-content {
+  position: absolute;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading-content-button {
+  background: 0;
+  border: 0;
+}
+
+.heading-content img {
+  width: 98px;
+  height: 35px;
+}
+
+.burger1 {
+  @include burger();
+}
+
+.burger2 {
+  @include burger();
+}
+
+.burger3 {
+  @include burger();
+}

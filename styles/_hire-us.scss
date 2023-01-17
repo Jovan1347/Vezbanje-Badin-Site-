@@ -1,0 +1,113 @@
+@import "./font";
+
+.hire-us {
+  padding: 50px 0;
+  padding-bottom: 0;
+
+  #{&}-container {
+    display: flex;
+    flex-direction: column;
+
+    .hire-us-container-text {
+      padding: 0 5%;
+      margin-bottom: 30px;
+    }
+
+    .hire-us-heading-back {
+      @include font-primary-medium;
+      font-size: 2em;
+      color: #e6e7e8;
+      margin-bottom: -25px;
+    }
+
+    .hire-us-heading {
+      @include font-secondary-italic;
+      font-size: 2em;
+      color: #22252e;
+    }
+
+    .hire-us-paragraph {
+      @include font-primary-medium;
+      font-size: 1em;
+      color: #4e5158;
+    }
+
+    .hire-us-button button {
+      @include font-primary-medium;
+      color: #ffffff;
+      font-size: 1em;
+      background-color: #317ade;
+      border: none;
+      border-radius: 30px;
+      width: fit-content;
+      padding: 15px 25px;
+      margin-top: 30px;
+    }
+
+    .hire-us-button button:hover {
+      background-color: #314ade;
+      transition: 0.5s;
+    }
+
+    .hire-us-container-trusted {
+      text-align: center;
+      background-color: #f9fafe;
+      padding: 50px 0;
+      p {
+        @include font-primary-medium;
+        color: #4e5158;
+      }
+    }
+
+    .hire-us-container-trusted-clients {
+      display: flex;
+      margin-top: 25px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hire-us-container-trusted-clients img {
+      width: 150px;
+      position: relative;
+      animation: move 15s infinite;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+@keyframes move {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 2250px;
+  }
+}
+
+@media all and(min-width:1280px) {
+  .hire-us {
+    #{&}-container {
+      .hire-us-container-text {
+        width: 50%;
+      }
+
+      .hire-us-heading-back {
+        font-size: 2.5em;
+        margin-bottom: -35px;
+      }
+
+      .hire-us-heading {
+        font-size: 2.5em;
+      }
+
+      .hire-us-paragraph {
+        font-size: 1.5em;
+      }
+
+      .hire-us-button button:hover {
+        transition: 0.5s;
+        background-color: #314ade;
+      }
+    }
+  }
+}

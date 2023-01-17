@@ -1,0 +1,35 @@
+.clients {
+  display: flex;
+  justify-content: center;
+  padding: 100px 5%;
+}
+
+.clients-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.clients-container img {
+  width: 200px;
+  padding: 10px;
+}
+
+@media all and(min-width: 1280px) {
+  .clients-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .clients-container-img11 {
+    grid-column: 2/3;
+  }
+
+  .clients-container-img12 {
+    grid-column: 3/3;
+  }
+
+  .clients-container-img13 {
+    grid-column: 4/4;
+  }
+}
