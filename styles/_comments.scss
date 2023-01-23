@@ -124,13 +124,12 @@
 @media all and(min-width:1280px) {
 
   .comments {
-    padding: 0 10%;
+    padding: 0 20%;
     padding-bottom: 100px;
   }
 
   .comments-title {
     font-size: 4em;
-    text-align: center;
   }
 
   .comments-paragraph {
@@ -142,10 +141,12 @@
     display: flex;
     flex-direction: row;
     align-content: center;
+    height: 500px;
 
     .comments-clients {
       position: relative;
-      width: 350px;
+      width: 400px;
+      height: 70%;
     }
 
     .comments-button {
@@ -162,6 +163,7 @@
       flex-direction: row;
       position: relative;
       justify-content: center;
+      height: 70%;
     }
 
     .comments-timeline-circle1 {
@@ -203,36 +205,43 @@
     .comments-testimonial {
       width: 50%;
       margin-left: 10px;
+      position: relative;
+      line-height: 1.5em;
     }
 
     .comments-testimonial1 {
       position: absolute;
       animation: testimonial1 infinite;
       animation-duration: 30s;
+      font-size: 1.25em;
     }
 
     .comments-testimonial2 {
       position: absolute;
       animation: testimonial2 infinite;
       animation-duration: 30s;
+      font-size: 1.25em;
     }
 
     .comments-testimonial3 {
       position: absolute;
       animation: testimonial3 infinite;
       animation-duration: 30s;
+      font-size: 1.25em;
     }
 
     .comments-testimonial4 {
       position: absolute;
       animation: testimonial4 infinite;
       animation-duration: 30s;
+      font-size: 1.25em;
     }
 
     .comments-testimonial5 {
       position: absolute;
       animation: testimonial5 infinite;
       animation-duration: 30s;
+      font-size: 1.25em;
     }
 
   }

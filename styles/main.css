@@ -50,7 +50,7 @@
 
 @media all and (min-width: 1280px) {
   .heading {
-    padding: 0 10%;
+    padding: 0 20%;
   }
   .heading-content {
     padding-top: 100px;
@@ -420,13 +420,14 @@
 @media all and (min-width: 1280px) {
   .hero {
     padding: 150px 10%;
+    padding-left: 20%;
   }
   .hero .hero-container {
     height: 65vh;
     flex-direction: row;
   }
   .hero .hero-text-title h1 {
-    font-size: 5em;
+    font-size: 6em;
   }
   .hero .hero-text-paragraph p {
     font-size: 1.37em;
@@ -554,12 +555,18 @@
 
 @media all and (min-width: 1280px) {
   .why {
-    padding: 0 10%;
+    padding: 0 20%;
     padding-bottom: 100px;
   }
+  .why-badin-item-container {
+    overflow: visible;
+  }
   .why-badin-item-container .why-badin-item-container-inv-pic {
-    width: 70%;
+    width: 80%;
     padding-bottom: 100px;
+  }
+  .why-badin-item-container .why-badin-item-image img {
+    width: 170%;
   }
   .why-badin-item-container .why-badin-item-container-inv-pic img {
     box-shadow: #888888 10px 10px 15px;
@@ -576,7 +583,7 @@
   }
   .why-badin-item-container .why-badin-item-text-title h2 {
     width: 25%;
-    font-size: 5.6em;
+    font-size: 4.5em;
     margin-top: 0;
   }
   .why-badin-item-container .why-badin-item-text-title p {
@@ -744,7 +751,7 @@
 
 @media all and (min-width: 1280px) {
   .offer {
-    padding: 100px 10%;
+    padding: 100px 20%;
   }
   .offer-info {
     display: flex;
@@ -754,7 +761,8 @@
     width: 50%;
   }
   .offer-info .offer-info-text h2 {
-    font-size: 4.3em;
+    width: 70%;
+    font-size: 5em;
   }
   .offer-info .offer-info-text p {
     font-size: 1.25em;
@@ -887,12 +895,11 @@
 
 @media all and (min-width: 1280px) {
   .comments {
-    padding: 0 10%;
+    padding: 0 20%;
     padding-bottom: 100px;
   }
   .comments-title {
     font-size: 4em;
-    text-align: center;
   }
   .comments-paragraph {
     width: 40%;
@@ -902,10 +909,12 @@
     display: flex;
     flex-direction: row;
     align-content: center;
+    height: 500px;
   }
   .comments-clients-and-testimonials .comments-clients {
     position: relative;
-    width: 350px;
+    width: 400px;
+    height: 70%;
   }
   .comments-clients-and-testimonials .comments-button {
     display: none;
@@ -920,6 +929,7 @@
     flex-direction: row;
     position: relative;
     justify-content: center;
+    height: 70%;
   }
   .comments-clients-and-testimonials .comments-timeline-circle1 {
     background-color: #f9fafe;
@@ -989,6 +999,8 @@
   .comments-clients-and-testimonials .comments-testimonial {
     width: 50%;
     margin-left: 10px;
+    position: relative;
+    line-height: 1.5em;
   }
   .comments-clients-and-testimonials .comments-testimonial1 {
     position: absolute;
@@ -996,6 +1008,7 @@
             animation: testimonial1 infinite;
     -webkit-animation-duration: 30s;
             animation-duration: 30s;
+    font-size: 1.25em;
   }
   .comments-clients-and-testimonials .comments-testimonial2 {
     position: absolute;
@@ -1003,6 +1016,7 @@
             animation: testimonial2 infinite;
     -webkit-animation-duration: 30s;
             animation-duration: 30s;
+    font-size: 1.25em;
   }
   .comments-clients-and-testimonials .comments-testimonial3 {
     position: absolute;
@@ -1010,6 +1024,7 @@
             animation: testimonial3 infinite;
     -webkit-animation-duration: 30s;
             animation-duration: 30s;
+    font-size: 1.25em;
   }
   .comments-clients-and-testimonials .comments-testimonial4 {
     position: absolute;
@@ -1017,6 +1032,7 @@
             animation: testimonial4 infinite;
     -webkit-animation-duration: 30s;
             animation-duration: 30s;
+    font-size: 1.25em;
   }
   .comments-clients-and-testimonials .comments-testimonial5 {
     position: absolute;
@@ -1024,6 +1040,7 @@
             animation: testimonial5 infinite;
     -webkit-animation-duration: 30s;
             animation-duration: 30s;
+    font-size: 1.25em;
   }
   .comments-clients {
     position: relative;
@@ -2014,7 +2031,7 @@
 
 @media all and (min-width: 1280px) {
   .join {
-    padding: 100px 10%;
+    padding: 100px 20%;
   }
   .join .join-container .join-container-heading-back {
     font-size: 3.5em;
@@ -2344,24 +2361,32 @@
 
 @media all and (min-width: 1280px) {
   .contact-us .contact-us-container {
-    padding: 50px 10%;
+    padding: 50px 20%;
+    padding-bottom: 100px;
     align-content: center;
     flex-direction: row;
+    position: relative;
   }
   .contact-us .contact-us-text {
-    width: 70%;
+    width: 100%;
   }
   .contact-us .contact-us-text .contact-us-heading-back {
-    font-size: 2.5em;
+    font-size: 6em;
   }
   .contact-us .contact-us-text .contact-us-heading {
-    font-size: 2.5em;
+    margin-top: -4%;
+    margin-bottom: 50px;
+    font-size: 4em;
+    width: 60%;
   }
   .contact-us .contact-us-text .contact-us-info a {
     font-size: 2.5em;
   }
   .contact-us .contact-us-image {
-    width: 30%;
+    width: 22%;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
   }
 }
 @font-face {

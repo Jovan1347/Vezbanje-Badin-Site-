@@ -148,7 +148,7 @@
 
 @media all and(min-width:1280px) {
   .offer {
-    padding: 100px 10%;
+    padding: 100px 20%;
   }
 
   .offer-info {
@@ -160,7 +160,8 @@
     }
 
     #{&}-text h2 {
-      font-size: 4.3em;
+      width: 70%;
+      font-size: 5em;
     }
 
     #{&}-text p {

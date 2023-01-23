@@ -34,14 +34,20 @@
 
 @media all and(min-width:1280px) {
   .why {
-    padding: 0 10%;
+    padding: 0 20%;
     padding-bottom: 100px;
   }
 
   .why-badin-item-container {
+    overflow: visible;
+
     .why-badin-item-container-inv-pic {
-      width: 70%;
+      width: 80%;
       padding-bottom: 100px;
+    }
+
+    .why-badin-item-image img {
+      width: 170%;
     }
 
     .why-badin-item-container-inv-pic img {
@@ -61,7 +67,7 @@
 
     .why-badin-item-text-title h2 {
       width: 25%;
-      font-size: 5.6em;
+      font-size: 4.5em;
       margin-top: 0;
     }
 

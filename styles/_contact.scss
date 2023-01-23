@@ -45,20 +45,25 @@
 @media all and(min-width:1280px) {
   .contact-us {
     #{&}-container {
-      padding: 50px 10%;
+      padding: 50px 20%;
+      padding-bottom: 100px;
       align-content: center;
       flex-direction: row;
+      position: relative;
     }
 
     #{&}-text {
-      width: 70%;
+      width: 100%;
 
       .contact-us-heading-back {
-        font-size: 2.5em;
+        font-size: 6em;
       }
 
       .contact-us-heading {
-        font-size: 2.5em;
+        margin-top: -4%;
+        margin-bottom: 50px;
+        font-size: 4em;
+        width: 60%;
       }
 
       .contact-us-info a {
@@ -67,7 +72,10 @@
     }
 
     #{&}-image {
-      width: 30%;
+      width: 22%;
+      position: absolute;
+      bottom: 0;
+      right: 10%;
     }
   }
 }
