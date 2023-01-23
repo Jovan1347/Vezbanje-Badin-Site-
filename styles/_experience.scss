@@ -1,19 +1,15 @@
 @import "./font";
+@import "./colors";
 
 .experience {
   #{&}-container {
+    @include experience-gradient;
+    @include heading-color;
     padding: 100px 0;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     justify-content: left;
-    background: linear-gradient(
-      274deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(9, 9, 121, 1) 38%,
-      rgba(0, 212, 255, 1) 100%
-    );
-    color: white;
 
     .experience-container-text {
       @include font-secondary-italic;
@@ -108,6 +104,7 @@
     from {
       right: 0;
     }
+
     to {
       right: 4879.125px;
     }
@@ -124,6 +121,7 @@
         width: unset;
         font-size: 2.5em;
       }
+
       .mobile {
         display: none;
       }

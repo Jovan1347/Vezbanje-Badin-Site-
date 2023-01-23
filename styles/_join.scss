@@ -1,21 +1,22 @@
 @import "./font";
+@import "./colors";
 
 .join {
+  @include section-color;
   padding: 100px 5%;
-  background-color: #f9fafe;
 
   #{&}-container {
     .join-container-heading-back {
       @include font-primary-medium;
+      @include heading-color-back;
       font-size: 2em;
-      color: #e6e7e8;
       margin-bottom: -25px;
     }
 
     .join-container-heading {
       @include font-secondary-italic;
+      @include heading-color-dark;
       font-size: 2em;
-      color: #22252e;
     }
 
     .join-container-button {
@@ -25,9 +26,9 @@
 
     .join-container-button button {
       @include font-primary-medium;
+      @include paragraph-color-light;
+      @include button-hero-color-dark;
       font-size: 1em;
-      color: #ffffff;
-      background-color: #000000;
       width: fit-content;
       padding: 15px 30px;
       border: none;
@@ -35,7 +36,7 @@
     }
 
     .join-container-button button:hover {
-      background-color: #22252e;
+      @include button-hero-color-dark-hover;
       transition: 0.5s;
     }
   }
@@ -44,28 +45,28 @@
     margin-top: 50px;
 
     .join-container-career-card {
+      @include white-background;
+      @include box-shadow;
       display: flex;
       flex-direction: column;
       padding: 20px 5%;
       width: 100%;
-      background-color: #ffffff;
       margin: 25px 0;
       border-radius: 10px;
-      box-shadow: #9b9c9e 1px 5px 20px;
     }
 
     .career-card-text {
       @include font-primary-medium;
+      @include paragraph-color-dark;
       font-size: 1em;
-      color: #22252e;
       margin-bottom: 20px;
     }
 
     .career-card-button button {
       @include font-primary-medium;
+      @include paragraph-color-light;
+      @include button-color-blue;
       font-size: 1em;
-      color: #ffffff;
-      background-color: #317ade;
       border: none;
       padding: 10px 20px;
       border-radius: 20px;
@@ -73,7 +74,7 @@
     }
 
     .career-card-button button:hover {
-      background-color: #314ade;
+      @include button-color-blue-hover;
       transition: 0.5s;
     }
   }
@@ -81,6 +82,9 @@
 
 @media all and(min-width:1280px) {
   .join {
+
+    padding: 100px 10%;
+
     #{&}-container {
       .join-container-heading-back {
         font-size: 3.5em;

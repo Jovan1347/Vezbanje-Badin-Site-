@@ -1,4 +1,5 @@
 @import "./font";
+@import "./colors";
 
 .contact-us {
   #{&}-container {
@@ -9,23 +10,24 @@
 
   #{&}-text {
     width: 90%;
+
     .contact-us-heading-back {
       @include font-primary-medium;
+      @include heading-color-back;
       font-size: 2em;
-      color: #e6e7e8;
       margin-bottom: -25px;
     }
 
     .contact-us-heading {
       @include font-secondary-italic;
+      @include heading-color-dark;
       font-size: 2em;
-      color: #22252e;
       margin-bottom: 30px;
     }
 
     .contact-us-info a {
       @include font-primary-medium;
-      color: #000000;
+      @include heading-color-dark;
       font-size: 1.75em;
     }
   }
@@ -43,7 +45,7 @@
 @media all and(min-width:1280px) {
   .contact-us {
     #{&}-container {
-      padding: 50px 5%;
+      padding: 50px 10%;
       align-content: center;
       flex-direction: row;
     }
@@ -65,7 +67,7 @@
     }
 
     #{&}-image {
-      width: 20%;
+      width: 30%;
     }
   }
 }

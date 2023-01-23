@@ -1,9 +1,19 @@
 @import "./font";
+@import "./colors";
+
+@mixin timeline-circle {
+  @include section-color;
+  @include timeline-circle-border;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+}
 
 .comments {
+  @include section-color;
   padding: 0 5%;
   padding-bottom: 100px;
-  background-color: #f9fafe;
 }
 
 .comments-title {
@@ -14,34 +24,60 @@
 
 .comments-paragraph {
   @include font-primary-medium;
+  @include paragraph-color-dark;
   font-size: 1.125em;
-  color: #4e5158;
-  margin-bottom: 24px;
+  margin-bottom: 50px;
 }
 
 .comments-clients {
   display: flex;
-  justify-content: space-evenly;
   margin-bottom: 24px;
+  width: fit-content;
 
-  #{&}-1 img {
+  #{&}-1 {
     width: 70px;
+    margin-right: 30px;
+
+    img {
+      width: 100%;
+    }
+
   }
 
-  #{&}-2 img {
+  #{&}-2 {
     width: 70px;
+    margin-right: 30px;
+
+    img {
+      width: 100%;
+    }
   }
 
-  #{&}-3 img {
+  #{&}-3 {
     width: 70px;
+    margin-right: 30px;
+
+    img {
+      width: 100%;
+    }
   }
 
-  #{&}-4 img {
+  #{&}-4 {
     width: 70px;
+    margin-right: 30px;
+
+    img {
+      width: 100%;
+    }
   }
 
-  #{&}-5 img {
+  #{&}-5 {
     width: 70px;
+    margin-right: 30px;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -56,8 +92,8 @@
   }
 
   #{&}-name p {
+    @include paragraph-color-dark;
     font-size: 1em;
-    color: #4e5158;
   }
 
   #{&}-content p {
@@ -66,7 +102,32 @@
   }
 }
 
+.comments-button {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 20px;
+
+  img {
+    width: 20px;
+  }
+
+  .back {
+    rotate: 180deg;
+  }
+
+  .forth {
+    margin-left: 15px;
+  }
+
+}
+
 @media all and(min-width:1280px) {
+
+  .comments {
+    padding: 0 10%;
+    padding-bottom: 100px;
+  }
+
   .comments-title {
     font-size: 4em;
     text-align: center;
@@ -80,230 +141,590 @@
   .comments-clients-and-testimonials {
     display: flex;
     flex-direction: row;
+    align-content: center;
 
     .comments-clients {
-      display: grid;
-      grid-template-columns: auto auto;
-      width: 40%;
+      position: relative;
+      width: 350px;
     }
+
+    .comments-button {
+      display: none;
+    }
+
+    .comments-timeline {
+      @include timeline-background-color;
+      width: 3px;
+      height: 260px;
+      margin: 0 10px;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: center;
+    }
+
+    .comments-timeline-circle1 {
+      @include timeline-circle();
+      top: 10%;
+      animation: timelineCircle1 infinite;
+      animation-duration: 30s;
+    }
+
+    .comments-timeline-circle2 {
+      @include timeline-circle();
+      top: 28%;
+      animation: timelineCircle2 infinite;
+      animation-duration: 30s;
+    }
+
+    .comments-timeline-circle3 {
+      @include timeline-circle();
+      top: 47%;
+      animation: timelineCircle3 infinite;
+      animation-duration: 30s;
+    }
+
+    .comments-timeline-circle4 {
+      @include timeline-circle();
+      bottom: 28%;
+      animation: timelineCircle4 infinite;
+      animation-duration: 30s;
+    }
+
+    .comments-timeline-circle5 {
+      @include timeline-circle();
+      bottom: 10%;
+      animation: timelineCircle5 infinite;
+      animation-duration: 30s;
+    }
+
 
     .comments-testimonial {
       width: 50%;
+      margin-left: 10px;
     }
+
+    .comments-testimonial1 {
+      position: absolute;
+      animation: testimonial1 infinite;
+      animation-duration: 30s;
+    }
+
+    .comments-testimonial2 {
+      position: absolute;
+      animation: testimonial2 infinite;
+      animation-duration: 30s;
+    }
+
+    .comments-testimonial3 {
+      position: absolute;
+      animation: testimonial3 infinite;
+      animation-duration: 30s;
+    }
+
+    .comments-testimonial4 {
+      position: absolute;
+      animation: testimonial4 infinite;
+      animation-duration: 30s;
+    }
+
+    .comments-testimonial5 {
+      position: absolute;
+      animation: testimonial5 infinite;
+      animation-duration: 30s;
+    }
+
   }
+
+
 
   .comments-clients {
     position: relative;
     justify-content: unset;
 
     #{&}-1 {
-      top: 0;
-      left: 85%;
-      position: relative;
+      position: absolute;
       animation: example1 infinite;
-      animation-duration: 15s;
+      animation-duration: 30s;
     }
 
     #{&}-2 {
-      top: 0;
-      left: -15%;
-      position: relative;
+      position: absolute;
       animation: example2 infinite;
-      animation-duration: 15s;
+      animation-duration: 30s;
     }
 
     #{&}-3 {
-      top: -100%;
-      left: 85%;
-      position: relative;
+      position: absolute;
       animation: example3 infinite;
-      animation-duration: 15s;
+      animation-duration: 30s;
     }
 
     #{&}-4 {
-      top: -100%;
-      left: -15%;
-      position: relative;
+      position: absolute;
       animation: example4 infinite;
-      animation-duration: 15s;
+      animation-duration: 30s;
     }
 
     #{&}-5 {
-      top: -200%;
-      left: 85%;
-      position: relative;
+      position: absolute;
       animation: example5 infinite;
-      animation-duration: 15s;
+      animation-duration: 30s;
     }
 
 
 
   }
 
-  .comments-timeline {
-    width: 3px;
-    height: 260px;
-    background-color: #4e5158;
-    margin: 0 10px;
-  }
 
   @keyframes example1 {
     0% {
-      left: 160%;
-      top: 100%;
-    }
-
-    20% {
-      left: 120%;
-      top: 250%;
-
-    }
-
-    40% {
-      left: 70%;
-      top: 250%;
-    }
-
-    60% {
-      left: 30%;
-      top: 100%;
-    }
-
-    80% {
-      top: 0;
-      left: 85%;
-    }
-
-    100% {
-      left: 160%;
-      top: 100%;
-    }
-  }
-
-  @keyframes example2 {
-    0% {}
-
-    20% {
       transform: scale(1.5);
-      left: 70%;
-      top: 100%;
+      left: 65%;
+      top: 40%;
+    }
 
+    20% {
+      transform: scale(1);
+      left: 60%;
+      top: 80%;
     }
 
     40% {
       transform: scale(1);
-      left: 20%;
-      top: 250%;
+      left: 10%;
+      top: 80%;
     }
 
     60% {
-      left: -30%;
-      top: 250%;
+      transform: scale(1);
+      left: 5%;
+      top: 35%;
     }
 
     80% {
-      left: -70%;
-      top: 100%;
+      transform: scale(1);
+      left: 40%;
+      top: 0;
     }
 
-    100% {}
+    100% {
+      transform: scale(1.5);
+      left: 65%;
+      top: 40%;
+    }
   }
 
-  @keyframes example3 {
+  @keyframes example2 {
     0% {
-      left: 30%;
+      transform: scale(1);
+      left: 40%;
       top: 0;
     }
 
     20% {
-      top: -100%;
-      left: 85%;
+      transform: scale(1.5);
+      left: 65%;
+      top: 40%;
     }
 
     40% {
-      left: 150%;
-      top: 0;
+      transform: scale(1);
+      left: 60%;
+      top: 80%;
     }
 
     60% {
-      left: 120%;
-      top: 150%;
+      transform: scale(1);
+      left: 10%;
+      top: 80%;
     }
 
     80% {
-      left: 70%;
-      top: 150%;
+      transform: scale(1);
+      left: 5%;
+      top: 35%;
     }
 
     100% {
-      left: 30%;
+      transform: scale(1);
+      left: 40%;
       top: 0;
+    }
+  }
+
+  @keyframes example3 {
+    0% {
+      transform: scale(1);
+      left: 5%;
+      top: 35%;
+    }
+
+    20% {
+      transform: scale(1);
+      left: 40%;
+      top: 0;
+    }
+
+    40% {
+      transform: scale(1.5);
+      left: 65%;
+      top: 40%;
+    }
+
+    60% {
+      transform: scale(1);
+      left: 60%;
+      top: 80%;
+    }
+
+    80% {
+      transform: scale(1);
+      left: 10%;
+      top: 80%;
+    }
+
+    100% {
+      transform: scale(1);
+      left: 5%;
+      top: 35%;
     }
   }
 
   @keyframes example4 {
     0% {
-      left: -30%;
-      top: 150%
+      transform: scale(1);
+      left: 10%;
+      top: 80%;
     }
 
     20% {
-      left: -70%;
-      top: 0;
+      transform: scale(1);
+      left: 5%;
+      top: 35%;
     }
 
     40% {
-      top: -100%;
-      left: -15%;
+      transform: scale(1);
+      left: 40%;
+      top: 0;
     }
 
     60% {
-      left: 50%;
-      top: 0;
-
+      transform: scale(1.5);
+      left: 65%;
+      top: 40%;
     }
 
     80% {
-      left: 20%;
-      top: 150%;
+      transform: scale(1);
+      left: 60%;
+      top: 80%;
     }
 
     100% {
-      left: -30%;
-      top: 150%;
+      transform: scale(1);
+      left: 10%;
+      top: 80%;
     }
   }
 
   @keyframes example5 {
     0% {
-      left: 120%;
-      top: 50%;
+      transform: scale(1);
+      left: 60%;
+      top: 80%;
     }
 
     20% {
-      left: 70%;
-      top: 50%
+      transform: scale(1);
+      left: 10%;
+      top: 80%;
     }
 
     40% {
-      left: 30%;
-      top: -100%;
+      transform: scale(1);
+      left: 5%;
+      top: 35%;
     }
 
     60% {
-      top: -200%;
-      left: 85%;
-
+      transform: scale(1);
+      left: 40%;
+      top: 0;
     }
 
     80% {
-      left: 150%;
-      top: -100%;
+      transform: scale(1.5);
+      left: 65%;
+      top: 40%;
     }
 
     100% {
-      left: 120%;
-      top: 50%;
+      transform: scale(1);
+      left: 60%;
+      top: 80%;
+    }
+  }
+
+  @keyframes timelineCircle1 {
+    0% {
+      @include circle-background-color-active;
+    }
+
+    20% {
+      @include section-color;
+    }
+
+    40% {
+      @include section-color;
+    }
+
+    60% {
+      @include section-color;
+    }
+
+    80% {
+      @include section-color;
+    }
+
+    100% {
+      @include circle-background-color-active;
+    }
+  }
+
+  @keyframes timelineCircle2 {
+    0% {
+      @include section-color;
+    }
+
+    20% {
+      @include circle-background-color-active;
+    }
+
+    40% {
+      @include section-color;
+    }
+
+    60% {
+      @include section-color;
+    }
+
+    80% {
+      @include section-color;
+    }
+
+    100% {
+      @include section-color;
+    }
+  }
+
+  @keyframes timelineCircle3 {
+    0% {
+      @include section-color;
+    }
+
+    20% {
+      @include section-color;
+    }
+
+    40% {
+      @include circle-background-color-active;
+    }
+
+    60% {
+      @include section-color;
+    }
+
+    80% {
+      @include section-color;
+    }
+
+    100% {
+      @include section-color;
+    }
+  }
+
+  @keyframes timelineCircle4 {
+    0% {
+      @include section-color;
+    }
+
+    20% {
+      @include section-color;
+    }
+
+    40% {
+      @include section-color;
+    }
+
+    60% {
+      @include circle-background-color-active;
+    }
+
+    80% {
+      @include section-color;
+    }
+
+    100% {
+      @include section-color;
+    }
+  }
+
+  @keyframes timelineCircle5 {
+    0% {
+      @include section-color;
+    }
+
+    20% {
+      @include section-color;
+    }
+
+    40% {
+      @include section-color;
+    }
+
+    60% {
+      @include section-color;
+    }
+
+    80% {
+      @include circle-background-color-active;
+    }
+
+    100% {
+      @include section-color;
+    }
+  }
+
+  @keyframes testimonial1 {
+    0% {
+      opacity: 1;
+    }
+
+    20% {
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 0;
+    }
+
+    60% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes testimonial2 {
+    0% {
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    40% {
+      opacity: 0;
+    }
+
+    60% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes testimonial3 {
+    0% {
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 1;
+    }
+
+    60% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes testimonial4 {
+    0% {
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 0;
+    }
+
+    60% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes testimonial5 {
+    0% {
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 0;
+    }
+
+    60% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
     }
   }
 

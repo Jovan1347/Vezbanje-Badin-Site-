@@ -1,6 +1,8 @@
+@import "./colors";
+
 .gallery {
+  @include white-background;
   padding: 100px 5%;
-  background-color: #ffffff;
 }
 
 .gallery-container {
@@ -19,10 +21,10 @@
   align-items: center;
 
   img {
+    @include box-shadow;
     height: 30%;
     width: 100%;
     margin-bottom: 30px;
-    box-shadow: 5px 5px 20px;
     border-radius: 20px;
   }
 }
@@ -32,9 +34,9 @@
   align-items: center;
 
   img {
+    @include box-shadow;
     width: 100%;
     border-radius: 25px;
-    box-shadow: 5px 5px 20px;
     margin-bottom: 30px;
   }
 }
@@ -48,15 +50,20 @@
   align-items: center;
 
   img {
+    @include box-shadow;
     height: 30%;
     width: 100%;
     margin-bottom: 30px;
-    box-shadow: 5px 5px 20px;
     border-radius: 20px;
   }
 }
 
 @media all and(min-width:1280px) {
+
+  .gallery {
+    padding: 100px 10%;
+  }
+
   .gallery-container {
     flex-direction: row;
     justify-content: space-between;
@@ -87,6 +94,7 @@
     from {
       bottom: -110px;
     }
+
     to {
       bottom: 0px;
     }

@@ -1,0 +1,98 @@
+@mixin section-color {
+    background-color: #f9fafe;
+}
+
+@mixin white-background {
+    background-color: #ffffff;
+}
+
+@mixin heading-color {
+    color: #ffffff;
+}
+
+@mixin heading-color-back {
+    color: #e6e7e8;
+}
+
+@mixin heading-color-dark {
+    color: #22252e;
+}
+
+@mixin paragraph-color-dark {
+    color: #4e5158;
+}
+
+@mixin paragraph-color-light {
+    color: #ffffff;
+}
+
+@mixin button-hero-color-light {
+    background-color: #ffffff;
+}
+
+@mixin button-hero-color-light-hover {
+    background-color: #cfcfcf;
+}
+
+@mixin button-hero-color-dark {
+    background-color: #393939;
+}
+
+@mixin button-hero-color-dark-hover {
+    background-color: #242324;
+}
+
+@mixin button-color-blue {
+    background-color: #317ade;
+}
+
+@mixin button-color-blue-hover {
+    background-color: #314ade;
+}
+
+@mixin offer-color1 {
+    color: #317ade;
+}
+
+@mixin offer-color2 {
+    color: #ed701d;
+}
+
+@mixin offer-color3 {
+    color: #1ebf73;
+}
+
+@mixin box-shadow {
+    box-shadow: #888888 10px 10px 15px;
+}
+
+@mixin timeline-circle-border {
+    border: 2px solid #999ede;
+}
+
+@mixin timeline-background-color {
+    background-color: #999ede;
+}
+
+@mixin circle-background-color-active {
+    background-color: #317ade;
+}
+
+@mixin experience-gradient {
+    background: linear-gradient(274deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(9, 9, 121, 1) 38%,
+            rgba(0, 212, 255, 1) 100%);
+}
+
+@mixin footer-background {
+    background-color: #22252e;
+}
+
+@mixin footer-text {
+    color: #999999;
+}
+
+@mixin footer-border {
+    border-top: 1px solid #999999;
+}

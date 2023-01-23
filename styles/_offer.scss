@@ -1,41 +1,42 @@
 @import "./font";
+@import "./colors";
 
 .offer {
+  @include section-color;
   padding: 50px 5%;
-  background-color: #f9fafe;
 }
 
 .offer-info {
   #{&}-text h2 {
     @include font-secondary-italic;
-    color: #22252e;
+    @include heading-color-dark;
     font-size: 3em;
     margin-bottom: 32px;
   }
 
   #{&}-text p {
     @include font-primary-light;
-    color: #4e5158;
+    @include paragraph-color-dark;
     margin: 30px 0;
     font-size: 1em;
   }
 
   #{&}-button button {
-    background-color: #317ade;
+    @include button-color-blue;
     border: none;
     border-radius: 30px;
     padding: 12px 33px;
   }
 
   #{&}-button button:hover {
-    background-color: #314ade;
+    @include button-color-blue-hover;
     transition: 0.5s;
   }
 
   #{&}-button a {
     @include font-primary-medium;
+    @include paragraph-color-light;
     text-decoration: none;
-    color: #ffffff;
     font-size: 1.25em;
   }
 }
@@ -52,15 +53,15 @@
     transform: scale(1.1);
 
     h2 {
-      color: #317ade;
+      @include offer-color1;
       transition: 0.5s;
     }
   }
 
   #{&}-wrapper1 p {
     @include font-primary-medium;
+    @include offer-color1;
     font-size: 1em;
-    color: #317ade;
     margin-bottom: 10px;
   }
 
@@ -95,15 +96,15 @@
     transform: scale(1.1);
 
     h2 {
-      color: #ed701d;
+      @include offer-color2;
       transition: 0.5s;
     }
   }
 
   #{&}-wrapper2 p {
     @include font-primary-medium;
+    @include offer-color2;
     font-size: 1em;
-    color: #ed701d;
     margin-bottom: 10px;
   }
 
@@ -115,6 +116,7 @@
 
   #{&}-wrapper3 {
     transition: transform 0.2s;
+
     .offer-product-wrapper-image img {
       width: 250px;
       height: 310px;
@@ -125,15 +127,15 @@
     transform: scale(1.1);
 
     h2 {
-      color: #1ebf73;
+      @include offer-color3;
       transition: 0.5s;
     }
   }
 
   #{&}-wrapper3 p {
     @include font-primary-medium;
+    @include offer-color3;
     font-size: 1em;
-    color: #1ebf73;
     margin-bottom: 10px;
   }
 
@@ -146,7 +148,7 @@
 
 @media all and(min-width:1280px) {
   .offer {
-    padding: 100px 5%;
+    padding: 100px 10%;
   }
 
   .offer-info {
@@ -168,14 +170,16 @@
 
   .offer-product {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: left;
 
     #{&}-wrapper1 {
       width: 30%;
+      margin-right: 40px;
     }
 
     #{&}-wrapper2 {
       width: 30%;
+      margin-right: 40px;
     }
 
     #{&}-wrapper3 {

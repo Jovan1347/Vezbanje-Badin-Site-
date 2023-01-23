@@ -1,4 +1,5 @@
 @import "./font";
+@import "./colors";
 
 .why {
   padding: 0 5%;
@@ -8,23 +9,24 @@
 .why-badin-item-container {
   .why-badin-item-text h2 {
     @include font-secondary-italic;
+    @include heading-color-dark;
     font-size: 3em;
-    color: #22252e;
     margin: 32px 0;
   }
 
   .why-badin-item-text p {
     @include font-primary-medium;
+    @include paragraph-color-dark;
     font-size: 1em;
-    color: #4e5158;
     margin: 50px 0;
   }
 
   .why-badin-item-image img {
+    @include box-shadow;
     width: 100%;
     border-radius: 20px;
-    box-shadow: #888888 10px 10px 15px;
   }
+
   .why-badin-item-container-inv-pic img {
     display: none;
   }
@@ -32,6 +34,7 @@
 
 @media all and(min-width:1280px) {
   .why {
+    padding: 0 10%;
     padding-bottom: 100px;
   }
 
@@ -42,8 +45,8 @@
     }
 
     .why-badin-item-container-inv-pic img {
+      @include box-shadow;
       border-radius: 20px;
-      box-shadow: #888888 10px 10px 15px;
       width: 100%;
       display: unset;
     }
@@ -69,6 +72,7 @@
       margin-bottom: 0;
     }
   }
+
   .why-badin-item-text-image-wrapper {
     display: flex;
     flex-direction: row;

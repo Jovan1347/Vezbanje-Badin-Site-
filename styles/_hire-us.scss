@@ -1,4 +1,5 @@
 @import "./font";
+@import "./colors";
 
 .hire-us {
   padding: 50px 0;
@@ -15,28 +16,28 @@
 
     .hire-us-heading-back {
       @include font-primary-medium;
+      @include heading-color-back;
       font-size: 2em;
-      color: #e6e7e8;
       margin-bottom: -25px;
     }
 
     .hire-us-heading {
       @include font-secondary-italic;
+      @include heading-color-dark;
       font-size: 2em;
-      color: #22252e;
     }
 
     .hire-us-paragraph {
       @include font-primary-medium;
+      @include paragraph-color-dark;
       font-size: 1em;
-      color: #4e5158;
     }
 
     .hire-us-button button {
       @include font-primary-medium;
-      color: #ffffff;
+      @include paragraph-color-light;
+      @include button-color-blue;
       font-size: 1em;
-      background-color: #317ade;
       border: none;
       border-radius: 30px;
       width: fit-content;
@@ -45,17 +46,18 @@
     }
 
     .hire-us-button button:hover {
-      background-color: #314ade;
+      @include button-color-blue-hover;
       transition: 0.5s;
     }
 
     .hire-us-container-trusted {
+      @include section-color;
       text-align: center;
-      background-color: #f9fafe;
       padding: 50px 0;
+
       p {
         @include font-primary-medium;
-        color: #4e5158;
+        @include paragraph-color-dark;
       }
     }
 
@@ -79,6 +81,7 @@
   from {
     right: 0px;
   }
+
   to {
     right: 2250px;
   }
@@ -87,8 +90,26 @@
 @media all and(min-width:1280px) {
   .hire-us {
     #{&}-container {
+      flex-direction: row;
+
       .hire-us-container-text {
-        width: 50%;
+        padding: 0 10%;
+        width: 70%;
+      }
+
+      .hire-us-container-trusted {
+        margin-top: -50px;
+        width: 30%;
+      }
+
+      .hire-us-container-trusted-clients {
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .hire-us-container-trusted-clients img {
+        width: 210px;
+        animation: unset;
       }
 
       .hire-us-heading-back {
@@ -105,8 +126,8 @@
       }
 
       .hire-us-button button:hover {
+        @include button-color-blue-hover;
         transition: 0.5s;
-        background-color: #314ade;
       }
     }
   }
