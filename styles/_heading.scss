@@ -55,6 +55,55 @@
   display: none;
 }
 
+#progress {
+  @include footer-background;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  height: 75px;
+  width: 75px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  border: 5px solid #22252e;
+  cursor: pointer;
+  z-index: 2;
+  animation: backToTop 0.5s;
+}
+
+#progress-value {
+  @include footer-background;
+  @include heading-color-dark;
+  border-radius: 50%;
+  border: 1px solid;
+  display: flex;
+  height: calc(115% - 15px);
+  width: calc(115% - 15px);
+  justify-content: center;
+  align-items: center;
+}
+
+#progress-value img {
+  height: 40%;
+  aspect-ratio: 1/1;
+}
+
+@keyframes backToTop {
+  0% {
+    width: 0;
+    height: 0;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  100% {
+    width: 75px;
+    height: 75px;
+    bottom: 20px;
+    right: 10px;
+  }
+}
+
 @media all and(min-width:1280px) {
   .heading {
     padding: 0 20%;
@@ -81,6 +130,7 @@
     flex-direction: column;
     rotate: 270deg;
     align-items: center;
+    z-index: 2;
   }
 
   .main-button {
@@ -95,9 +145,7 @@
     font-size: 0.75em;
   }
 
-  .changeColor {
-    background-color: black;
-  }
+
 
   .main-item:hover {
     .div2 {
@@ -125,6 +173,15 @@
   .div3 {
     @include burger2();
   }
+
+  .changeColor {
+    @include footer-background;
+  }
+
+  .changeColorText {
+    @include heading-color-dark;
+  }
+
 
   @keyframes burger2 {
     0% {}
