@@ -1924,6 +1924,7 @@
   font-style: normal;
   color: #4e5158;
   font-size: 1em;
+  width: 60%;
 }
 .hire-us .hire-us-container .hire-us-button button {
   font-family: futura-pt, "Arial Condensed", sans-serif;
@@ -1957,9 +1958,14 @@
 }
 .hire-us .hire-us-container .hire-us-container-trusted-clients {
   display: flex;
+  flex-direction: row;
   margin-top: 25px;
   overflow: hidden;
   position: relative;
+}
+.hire-us .hire-us-container .rest {
+  display: flex;
+  flex-direction: row;
 }
 .hire-us .hire-us-container .hire-us-container-trusted-clients img {
   width: 150px;
@@ -1990,37 +1996,133 @@
 @media all and (min-width: 1280px) {
   .hire-us .hire-us-container {
     flex-direction: row;
+    height: 90vh;
   }
   .hire-us .hire-us-container .hire-us-container-text {
-    padding: 0 10%;
-    width: 70%;
+    padding: 100px 20%;
+    width: 80%;
   }
   .hire-us .hire-us-container .hire-us-container-trusted {
     margin-top: -50px;
-    width: 30%;
+    width: 20%;
+    padding: 100px 0;
   }
   .hire-us .hire-us-container .hire-us-container-trusted-clients {
     align-items: center;
     flex-direction: column;
+    height: 100%;
   }
   .hire-us .hire-us-container .hire-us-container-trusted-clients img {
     width: 210px;
     -webkit-animation: unset;
             animation: unset;
   }
+  .hire-us .hire-us-container .rest {
+    display: none;
+  }
+  .hire-us .hire-us-container #bubbleMessage1 {
+    display: none;
+  }
+  .hire-us .hire-us-container #bubbleMessage3 {
+    display: none;
+  }
+  .hire-us .hire-us-container .showTrusted {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    height: 90%;
+    -webkit-animation: showTrusted 5s linear infinite;
+            animation: showTrusted 5s linear infinite;
+  }
+  .hire-us .hire-us-container .hideTrusted {
+    display: none;
+  }
   .hire-us .hire-us-container .hire-us-heading-back {
-    font-size: 2.5em;
-    margin-bottom: -35px;
+    font-size: 4em;
+    margin-bottom: -60px;
   }
   .hire-us .hire-us-container .hire-us-heading {
-    font-size: 2.5em;
+    font-size: 4.5em;
   }
   .hire-us .hire-us-container .hire-us-paragraph {
     font-size: 1.5em;
   }
+  .hire-us .hire-us-container .hire-us-button button {
+    width: 170px;
+  }
   .hire-us .hire-us-container .hire-us-button button:hover {
     background-color: #314ade;
     transition: 0.5s;
+  }
+  @-webkit-keyframes showTrusted {
+    0% {
+      bottom: -200px;
+      opacity: 0;
+    }
+    15% {
+      bottom: -100px;
+      opacity: 0.5;
+    }
+    30% {
+      bottom: 0px;
+      opacity: 1;
+    }
+    45% {
+      bottom: 0px;
+      opacity: 1;
+    }
+    60% {
+      bottom: 0px;
+      opacity: 1;
+    }
+    75% {
+      bottom: 0px;
+      opacity: 1;
+    }
+    90% {
+      bottom: 100px;
+      opacity: 0.5;
+    }
+    100% {
+      bottom: 200px;
+      opacity: 0;
+    }
+  }
+  @keyframes showTrusted {
+    0% {
+      bottom: -200px;
+      opacity: 0;
+    }
+    15% {
+      bottom: -100px;
+      opacity: 0.5;
+    }
+    30% {
+      bottom: 0px;
+      opacity: 1;
+    }
+    45% {
+      bottom: 0px;
+      opacity: 1;
+    }
+    60% {
+      bottom: 0px;
+      opacity: 1;
+    }
+    75% {
+      bottom: 0px;
+      opacity: 1;
+    }
+    90% {
+      bottom: 100px;
+      opacity: 0.5;
+    }
+    100% {
+      bottom: 200px;
+      opacity: 0;
+    }
   }
 }
 @font-face {
@@ -2247,10 +2349,7 @@
   background: linear-gradient(274deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 38%, rgb(0, 212, 255) 100%);
   color: #ffffff;
   padding: 100px 0;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  justify-content: left;
+  position: relative;
 }
 .experience .experience-container .experience-container-text {
   font-family: lust, "Courier", serif;
@@ -2261,122 +2360,96 @@
   margin-bottom: 50px;
   padding: 0px 20px;
 }
+.experience .experience-container .experience-slider1-parent {
+  position: relative;
+  height: 90px;
+}
 .experience .experience-container .experience-slider1 {
   display: flex;
-  gap: 25px;
   margin: 30px 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  -webkit-animation: moving 30s alternate infinite linear;
+          animation: moving 30s alternate infinite linear;
 }
 .experience .experience-container .experience-slider1 .tech {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  margin-right: 25px;
   font-family: futura-pt, "Arial Condensed", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 1.5em;
   white-space: nowrap;
   opacity: 60%;
+}
+.experience .experience-container .experience-slider2-parent {
   position: relative;
-  -webkit-animation: moving 40s infinite alternate;
-          animation: moving 40s infinite alternate;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  height: 90px;
 }
 .experience .experience-container .experience-slider2 {
   display: flex;
-  gap: 25px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   margin: 30px 0;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  animation: moving 30s alternate-reverse infinite linear;
 }
 .experience .experience-container .experience-slider2 .tech {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  margin-right: 25px;
   font-family: futura-pt, "Arial Condensed", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 1.5em;
   white-space: nowrap;
   opacity: 60%;
+}
+.experience .experience-container .experience-slider3-parent {
   position: relative;
-  animation: moving 40s infinite alternate-reverse;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  height: 90px;
 }
 .experience .experience-container .experience-slider3 {
   display: flex;
-  gap: 25px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   margin: 30px 0;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  -webkit-animation: moving 30s alternate infinite linear;
+          animation: moving 30s alternate infinite linear;
 }
 .experience .experience-container .experience-slider3 .tech {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  margin-right: 25px;
   font-family: futura-pt, "Arial Condensed", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 1.5em;
   white-space: nowrap;
   opacity: 60%;
+}
+.experience .experience-container .experience-slider4-parent {
   position: relative;
-  -webkit-animation: moving 40s infinite alternate;
-          animation: moving 40s infinite alternate;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  height: 90px;
 }
 .experience .experience-container .experience-slider4 {
   display: flex;
-  gap: 25px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   margin: 30px 0;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  animation: moving 30s alternate-reverse infinite linear;
 }
 .experience .experience-container .experience-slider4 .tech {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  margin-right: 25px;
   font-family: futura-pt, "Arial Condensed", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 1.5em;
   white-space: nowrap;
   opacity: 60%;
-  position: relative;
-  animation: moving 40s infinite alternate-reverse;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
 }
 @-webkit-keyframes moving {
-  from {
-    right: 0;
-  }
   to {
-    right: 50%;
+    transform: translateX(calc(-100% + 100vw - 35px));
   }
 }
 @keyframes moving {
-  from {
-    right: 0;
-  }
   to {
-    right: 50%;
+    transform: translateX(calc(-100% + 100vw - 35px));
   }
 }
 
@@ -2388,6 +2461,8 @@
   .experience .experience-container .experience-container-text {
     width: unset;
     font-size: 2.5em;
+    position: relative;
+    right: -35%;
   }
   .experience .experience-container .mobile {
     display: none;

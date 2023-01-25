@@ -67,3 +67,12 @@ let calcScrollValue = () => {
 
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
+
+/* --------- T R U S T E D  B Y --------- */
+
+let cards = document.querySelectorAll(".trusted-img");
+
+let arr = Array.from(cards);
+let sliced = arr.slice(0, 5);
+
+console.log(sliced);

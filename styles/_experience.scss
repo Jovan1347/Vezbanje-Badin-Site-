@@ -6,10 +6,7 @@
     @include experience-gradient;
     @include heading-color;
     padding: 100px 0;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    justify-content: left;
+    position: relative;
 
     .experience-container-text {
       @include font-secondary-italic;
@@ -19,96 +16,97 @@
       padding: 0px 20px;
     }
 
+    .experience-slider1-parent {
+      position: relative;
+      height: 90px;
+    }
+
     .experience-slider1 {
       display: flex;
-      gap: 25px;
       margin: 30px 0;
-      width: fit-content;
       overflow: hidden;
-      position: relative;
+      position: absolute;
+      animation: moving 30s alternate infinite linear;
 
       .tech {
-        width: fit-content;
+        margin-right: 25px;
         @include font-primary-medium;
         font-size: 1.5em;
         white-space: nowrap;
         opacity: 60%;
-        position: relative;
-        animation: moving 40s infinite alternate;
-        animation-timing-function: linear;
       }
+    }
+
+    .experience-slider2-parent {
+      position: relative;
+      height: 90px;
     }
 
     .experience-slider2 {
       display: flex;
-      gap: 25px;
-      width: fit-content;
       margin: 30px 0;
       overflow: hidden;
-      position: relative;
+      position: absolute;
+      animation: moving 30s alternate-reverse infinite linear;
 
       .tech {
-        width: fit-content;
+        margin-right: 25px;
         @include font-primary-medium;
         font-size: 1.5em;
         white-space: nowrap;
         opacity: 60%;
-        position: relative;
-        animation: moving 40s infinite alternate-reverse;
-        animation-timing-function: linear;
       }
+    }
+
+    .experience-slider3-parent {
+      position: relative;
+      height: 90px;
     }
 
     .experience-slider3 {
       display: flex;
-      gap: 25px;
-      width: fit-content;
       margin: 30px 0;
       overflow: hidden;
-      position: relative;
+      position: absolute;
+      animation: moving 30s alternate infinite linear;
 
       .tech {
-        width: fit-content;
+        margin-right: 25px;
         @include font-primary-medium;
         font-size: 1.5em;
         white-space: nowrap;
         opacity: 60%;
-        position: relative;
-        animation: moving 40s infinite alternate;
-        animation-timing-function: linear;
       }
+    }
+
+    .experience-slider4-parent {
+      position: relative;
+      height: 90px;
     }
 
     .experience-slider4 {
       display: flex;
-      gap: 25px;
-      width: fit-content;
       margin: 30px 0;
       overflow: hidden;
-      position: relative;
+      position: absolute;
+      animation: moving 30s alternate-reverse infinite linear;
 
       .tech {
-        width: fit-content;
+        margin-right: 25px;
         @include font-primary-medium;
         font-size: 1.5em;
         white-space: nowrap;
         opacity: 60%;
-        position: relative;
-        animation: moving 40s infinite alternate-reverse;
-        animation-timing-function: linear;
       }
     }
   }
 
   @keyframes moving {
-    from {
-      right: 0;
-    }
-
     to {
-      right: 50%;
+      transform: translateX(calc(-100% + 100vw - 35px));
     }
   }
+
 }
 
 @media all and(min-width:1280px) {
@@ -120,6 +118,8 @@
       .experience-container-text {
         width: unset;
         font-size: 2.5em;
+        position: relative;
+        right: -35%;
       }
 
       .mobile {

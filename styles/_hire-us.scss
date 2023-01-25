@@ -31,6 +31,7 @@
       @include font-primary-medium;
       @include paragraph-color-dark;
       font-size: 1em;
+      width: 60%;
     }
 
     .hire-us-button button {
@@ -63,9 +64,23 @@
 
     .hire-us-container-trusted-clients {
       display: flex;
+      flex-direction: row;
       margin-top: 25px;
       overflow: hidden;
       position: relative;
+    }
+
+    .showTrusted {}
+
+    #bubbleMessage1 {}
+
+    #bubbleMessage2 {}
+
+    #bubbleMessage3 {}
+
+    .rest {
+      display: flex;
+      flex-direction: row;
     }
 
     .hire-us-container-trusted-clients img {
@@ -91,20 +106,23 @@
   .hire-us {
     #{&}-container {
       flex-direction: row;
+      height: 90vh;
 
       .hire-us-container-text {
-        padding: 0 10%;
-        width: 70%;
+        padding: 100px 20%;
+        width: 80%;
       }
 
       .hire-us-container-trusted {
         margin-top: -50px;
-        width: 30%;
+        width: 20%;
+        padding: 100px 0;
       }
 
       .hire-us-container-trusted-clients {
         align-items: center;
         flex-direction: column;
+        height: 100%;
       }
 
       .hire-us-container-trusted-clients img {
@@ -112,17 +130,51 @@
         animation: unset;
       }
 
+      .rest {
+        display: none;
+      }
+
+
+
+      #bubbleMessage1 {
+        display: none;
+      }
+
+      #bubbleMessage2 {}
+
+      #bubbleMessage3 {
+        display: none;
+      }
+
+      .showTrusted {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        height: 90%;
+        animation: showTrusted 5s linear infinite;
+      }
+
+      .hideTrusted {
+        display: none;
+      }
+
       .hire-us-heading-back {
-        font-size: 2.5em;
-        margin-bottom: -35px;
+        font-size: 4em;
+        margin-bottom: -60px;
       }
 
       .hire-us-heading {
-        font-size: 2.5em;
+        font-size: 4.5em;
       }
 
       .hire-us-paragraph {
         font-size: 1.5em;
+      }
+
+      .hire-us-button button {
+        width: 170px;
       }
 
       .hire-us-button button:hover {
@@ -131,4 +183,65 @@
       }
     }
   }
+
+  @keyframes showTrusted {
+    0% {
+      bottom: -200px;
+      opacity: 0;
+    }
+
+    15% {
+      bottom: -100px;
+      opacity: 0.5;
+    }
+
+    30% {
+      bottom: 0px;
+      opacity: 1;
+    }
+
+    45% {
+      bottom: 0px;
+      opacity: 1;
+    }
+
+    60% {
+      bottom: 0px;
+      opacity: 1;
+    }
+
+    75% {
+      bottom: 0px;
+      opacity: 1;
+    }
+
+    90% {
+      bottom: 100px;
+      opacity: 0.5;
+    }
+
+    100% {
+      bottom: 200px;
+      opacity: 0;
+    }
+
+  }
+
+  // @keyframes hideTrusted {
+  //   0% {
+  //     bottom: 0px;
+  //     opacity: 1;
+  //   }
+
+  //   50% {
+  //     bottom: -100px;
+  //     opacity: 0.5;
+  //   }
+
+  //   100% {
+  //     bottom: -200px;
+  //     opacity: 0;
+  //   }
+  // }
+
 }
