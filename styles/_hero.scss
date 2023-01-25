@@ -124,9 +124,13 @@
 
 .header-hero-white {
   position: absolute;
-  right: -40%;
+  right: -30%;
+  width: 150%;
   bottom: -1%;
-  width: 100%;
+}
+
+.header-hero-white-small {
+  display: none;
 }
 
 .header-hero-tower1 {
@@ -274,11 +278,21 @@
 
   .header-hero-planet {
     bottom: 90%;
+    width: 15%;
   }
 
   .header-hero-white {
-    right: -65%;
-    height: 160%;
+    right: -30%;
+    width: 240%;
+    bottom: -1%;
+  }
+
+  .header-hero-white-small {
+    position: absolute;
+    display: unset;
+    width: 50%;
+    top: -47%;
+    right: 20%;
   }
 
   .header-hero-tower1 {

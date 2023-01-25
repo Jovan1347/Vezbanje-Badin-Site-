@@ -55,7 +55,7 @@ let calcScrollValue = () => {
     document.documentElement.clientHeight;
   let scrollValue = Math.round((pos * 100) / calcHeight);
   if (pos > 100) {
-    scrollProgress.style.display = "grid";
+    scrollProgress.style.display = "flex";
   } else {
     scrollProgress.style.display = "none";
   }

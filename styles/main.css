@@ -53,12 +53,13 @@
   position: fixed;
   bottom: 20px;
   right: 10px;
-  height: 75px;
-  width: 75px;
+  height: 65px;
+  width: 65px;
   display: none;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  border: 5px solid #22252e;
+  border: 10px solid #22252e;
   cursor: pointer;
   z-index: 2;
   -webkit-animation: backToTop 0.5s;
@@ -71,14 +72,14 @@
   border-radius: 50%;
   border: 1px solid;
   display: flex;
-  height: calc(115% - 15px);
-  width: calc(115% - 15px);
+  height: calc(125% - 15px);
+  width: calc(125% - 15px);
   justify-content: center;
   align-items: center;
 }
 
 #progress-value img {
-  height: 40%;
+  height: 50%;
   aspect-ratio: 1/1;
 }
 
@@ -90,8 +91,8 @@
     right: 0px;
   }
   100% {
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     bottom: 20px;
     right: 10px;
   }
@@ -105,8 +106,8 @@
     right: 0px;
   }
   100% {
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     bottom: 20px;
     right: 10px;
   }
@@ -348,9 +349,13 @@
 
 .header-hero-white {
   position: absolute;
-  right: -40%;
+  right: -30%;
+  width: 150%;
   bottom: -1%;
-  width: 100%;
+}
+
+.header-hero-white-small {
+  display: none;
 }
 
 .header-hero-tower1 {
@@ -525,10 +530,19 @@
   }
   .header-hero-planet {
     bottom: 90%;
+    width: 15%;
   }
   .header-hero-white {
-    right: -65%;
-    height: 160%;
+    right: -30%;
+    width: 240%;
+    bottom: -1%;
+  }
+  .header-hero-white-small {
+    position: absolute;
+    display: unset;
+    width: 50%;
+    top: -47%;
+    right: 20%;
   }
   .header-hero-tower1 {
     width: 20%;
@@ -2354,7 +2368,7 @@
     right: 0;
   }
   to {
-    right: 4879.125px;
+    right: 50%;
   }
 }
 @keyframes moving {
@@ -2362,7 +2376,7 @@
     right: 0;
   }
   to {
-    right: 4879.125px;
+    right: 50%;
   }
 }
 
