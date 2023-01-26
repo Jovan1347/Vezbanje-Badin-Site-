@@ -2006,7 +2006,7 @@
 @media all and (min-width: 1280px) {
   .hire-us .hire-us-container {
     flex-direction: row;
-    height: 90vh;
+    height: 900px;
   }
   .hire-us .hire-us-container .hire-us-container-text {
     padding: 100px 20%;
