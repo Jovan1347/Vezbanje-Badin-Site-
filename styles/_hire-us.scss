@@ -51,6 +51,39 @@
       transition: 0.5s;
     }
 
+    .hire-us-container-trusted-clients {
+      display: none;
+    }
+
+    #showTrusted {
+      display: none;
+    }
+
+    #showTrusted-mobile {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .hire-us-container-trusted-clients-mobile {
+      display: flex;
+      flex-direction: row;
+      margin-top: 25px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .rest {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .hire-us-container-trusted-clients-mobile img {
+      width: 150px;
+      position: relative;
+      animation: move 15s infinite;
+      animation-timing-function: linear;
+    }
+
     .hire-us-container-trusted {
       @include section-color;
       text-align: center;
@@ -61,34 +94,6 @@
         @include paragraph-color-dark;
       }
     }
-
-    .hire-us-container-trusted-clients {
-      display: flex;
-      flex-direction: row;
-      margin-top: 25px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .showTrusted {}
-
-    #bubbleMessage1 {}
-
-    #bubbleMessage2 {}
-
-    #bubbleMessage3 {}
-
-    .rest {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .hire-us-container-trusted-clients img {
-      width: 150px;
-      position: relative;
-      animation: move 15s infinite;
-      animation-timing-function: linear;
-    }
   }
 }
 
@@ -98,7 +103,7 @@
   }
 
   to {
-    right: 2250px;
+    right: 1950px;
   }
 }
 
@@ -120,43 +125,38 @@
       }
 
       .hire-us-container-trusted-clients {
+        display: flex;
+        margin-top: 25px;
+        overflow: hidden;
+        position: relative;
         align-items: center;
         flex-direction: column;
         height: 100%;
       }
 
+      .hire-us-container-trusted-clients-mobile {
+        display: none;
+      }
+
       .hire-us-container-trusted-clients img {
+        position: relative;
         width: 210px;
-        animation: unset;
       }
 
       .rest {
         display: none;
       }
 
-
-
-      #bubbleMessage1 {
-        display: none;
-      }
-
-      #bubbleMessage2 {}
-
-      #bubbleMessage3 {
-        display: none;
-      }
-
-      .showTrusted {
+      #showTrusted {
         display: flex;
         position: relative;
         flex-direction: column;
         justify-content: space-between;
         align-content: center;
         height: 90%;
-        animation: showTrusted 5s linear infinite;
       }
 
-      .hideTrusted {
+      .trusted-img {
         display: none;
       }
 
@@ -184,23 +184,18 @@
     }
   }
 
-  @keyframes showTrusted {
+  @keyframes showTrusted1 {
     0% {
-      bottom: -200px;
+      bottom: -100px;
       opacity: 0;
     }
 
-    15% {
-      bottom: -100px;
-      opacity: 0.5;
-    }
-
-    30% {
+    20% {
       bottom: 0px;
       opacity: 1;
     }
 
-    45% {
+    40% {
       bottom: 0px;
       opacity: 1;
     }
@@ -210,19 +205,146 @@
       opacity: 1;
     }
 
-    75% {
+    80% {
       bottom: 0px;
       opacity: 1;
     }
 
-    90% {
-      bottom: 100px;
-      opacity: 0.5;
+    100% {
+      bottom: 0px;
+      opacity: 1;
+    }
+
+  }
+
+  @keyframes showTrusted2 {
+    0% {
+      bottom: -100px;
+      opacity: 0;
+    }
+
+    20% {
+      bottom: 0px;
+      opacity: 0;
+    }
+
+    40% {
+      bottom: 0px;
+      opacity: 1;
+    }
+
+    60% {
+      bottom: 0px;
+      opacity: 1;
+    }
+
+    80% {
+      bottom: 0px;
+      opacity: 1;
     }
 
     100% {
-      bottom: 200px;
+      bottom: 0px;
+      opacity: 1;
+    }
+
+  }
+
+  @keyframes showTrusted3 {
+    0% {
+      bottom: -100px;
       opacity: 0;
+    }
+
+    20% {
+      bottom: 0px;
+      opacity: 0;
+    }
+
+    40% {
+      bottom: 0px;
+      opacity: 0;
+    }
+
+    60% {
+      bottom: 0px;
+      opacity: 1;
+    }
+
+    80% {
+      bottom: 0px;
+      opacity: 1;
+    }
+
+    100% {
+      bottom: 0px;
+      opacity: 1;
+    }
+
+  }
+
+  @keyframes showTrusted4 {
+    0% {
+      bottom: -100px;
+      opacity: 0;
+    }
+
+    20% {
+      bottom: 0px;
+      opacity: 0;
+    }
+
+    40% {
+      bottom: 0px;
+      opacity: 0;
+    }
+
+    60% {
+      bottom: 0px;
+      opacity: 0;
+    }
+
+    80% {
+      bottom: 0px;
+      opacity: 1;
+    }
+
+    100% {
+      bottom: 0px;
+      opacity: 1;
+    }
+
+  }
+
+  @keyframes showTrusted5 {
+    0% {
+      bottom: -100px;
+      opacity: 0;
+    }
+
+    20% {
+      bottom: 0px;
+      opacity: 0;
+    }
+
+    40% {
+      bottom: 0px;
+      opacity: 0;
+    }
+
+    60% {
+      bottom: 0px;
+      opacity: 0;
+    }
+
+    80% {
+      bottom: 0px;
+      opacity: 0;
+    }
+
+    100% {
+      bottom: 0px;
+      opacity: 1;
     }
 
   }

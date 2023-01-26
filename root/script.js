@@ -70,9 +70,26 @@ window.onload = calcScrollValue;
 
 /* --------- T R U S T E D  B Y --------- */
 
+let container = document.getElementById("showTrusted");
+
 let cards = document.querySelectorAll(".trusted-img");
 
 let arr = Array.from(cards);
-let sliced = arr.slice(0, 5);
 
-console.log(sliced);
+setInterval(() => {
+  let sliced = arr.splice(0, 5);
+
+  arr.forEach((item) => {
+    item.style.display = "none";
+  });
+
+  container.innerHTML = " ";
+
+  sliced.forEach((card, index) => {
+    container.append(card);
+    card.style.display = "inline-block";
+    card.style.animation = `showTrusted${index + 1} 2s`;
+    console.log(card);
+  });
+  arr.splice(7, 0, ...sliced);
+}, 3000);
