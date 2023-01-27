@@ -20,11 +20,37 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(document.querySelector(".hero"));
 });
 
-let menu = document.querySelectorAll(".menu");
+let menu = document.querySelectorAll(".menu-button");
+let menuButton = document.querySelector(".main-item");
 let menuText = document.querySelectorAll(".main-text");
+let menuSection = document.querySelector(".menu");
+let menuContainer = document.querySelector(".menu-container");
+let menuIcons = document.querySelector(".menu-icons");
+
+menuButton.addEventListener("mouseover", () => {
+  menuSection.classList.add("menuShow");
+  menuSection.style.display = "unset";
+});
+
+menuButton.addEventListener("mouseout", () => {
+  menuSection.classList.remove("menuShow");
+  menuSection.style.display = "none";
+});
+
+menuButton.addEventListener("click", () => {
+  menuSection.classList.add("menuClick");
+  menuSection.style.display = "unset";
+});
+
+menuButton.addEventListener("click", () => {
+  menuContainer.classList.add("containerOpacity");
+});
+
+menuButton.addEventListener("click", () => {
+  menuIcons.style.display = "unset";
+});
 
 function beTouching(entries) {
-  // entries all sections
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       menu.forEach((item) => {
@@ -71,9 +97,7 @@ window.onload = calcScrollValue;
 /* --------- T R U S T E D  B Y --------- */
 
 let container = document.getElementById("showTrusted");
-
 let cards = document.querySelectorAll(".trusted-img");
-
 let arr = Array.from(cards);
 
 setInterval(() => {
@@ -89,7 +113,43 @@ setInterval(() => {
     container.append(card);
     card.style.display = "inline-block";
     card.style.animation = `showTrusted${index + 1} 2s`;
-    console.log(card);
   });
   arr.splice(7, 0, ...sliced);
 }, 3000);
+
+/* --------- T E S T I M O N I A L --------- */
+
+let clientsContainer = document.getElementById("comment-clients");
+let client = Array.from(clientsContainer.children);
+let buttonLeft = document.getElementById("button-left");
+let buttonRight = document.getElementById("button-right");
+
+let x = 0;
+document
+  .getElementById("comments-button")
+  .addEventListener("click", function (evt) {
+    let target = evt.target;
+
+    if (target.id === "button-right") {
+      let slicedClient = client.splice(0, 1);
+      clientsContainer.style.transform = `translateX(-${x}px)`;
+      x += 100;
+
+      console.log(x);
+
+      slicedClient.forEach((item) => {
+        item.classList.add("showClient");
+      });
+    } else if (target.id === "button-left") {
+      let slicedClient = client.splice(0, 1);
+
+      slicedClient.forEach((item) => {
+        let x = 0;
+        item.style.scale = "1";
+        clientsContainer.style.transform = `translateX(${x}px)`;
+        x += 100;
+      });
+    }
+  });
+
+console.log(clientsContainer.scrollWidth);

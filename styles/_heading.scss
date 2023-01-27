@@ -57,6 +57,7 @@
 
 #progress {
   @include footer-background;
+  z-index: 5;
   position: fixed;
   bottom: 20px;
   right: 10px;
@@ -131,7 +132,7 @@
     flex-direction: column;
     rotate: 270deg;
     align-items: center;
-    z-index: 2;
+    z-index: 4;
   }
 
   .main-button {
@@ -146,8 +147,6 @@
     font-size: 0.75em;
   }
 
-
-
   .main-item:hover {
     .div2 {
       animation: burger2 0.5s forwards;
@@ -161,7 +160,6 @@
       animation: textChange 0.5s forwards;
     }
   }
-
 
   .div1 {
     @include burger2();

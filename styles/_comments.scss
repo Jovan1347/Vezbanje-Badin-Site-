@@ -31,8 +31,10 @@
 
 .comments-clients {
   display: flex;
+  flex-direction: row;
   margin-bottom: 24px;
   width: fit-content;
+  position: relative;
 
   #{&}-1 {
     width: 70px;
@@ -79,6 +81,12 @@
       width: 100%;
     }
   }
+
+  .showClient {
+    scale: 1.5;
+    margin-top: -10px;
+  }
+
 }
 
 .comments-testimonial {
@@ -102,7 +110,31 @@
   }
 }
 
-.comments-button {
+.comments-testimonial1 {
+  display: none;
+}
+
+.comments-testimonial2 {
+  display: none;
+}
+
+.comments-testimonial3 {
+  display: none;
+}
+
+.comments-testimonial4 {
+  display: none;
+}
+
+.comments-testimonial5 {
+  display: none;
+}
+
+.showTestimonial {
+  display: unset;
+}
+
+#comments-button {
   display: flex;
   justify-content: right;
   margin-bottom: 20px;
@@ -122,6 +154,10 @@
 }
 
 @media all and(min-width:1280px) {
+
+  #comments-button {
+    display: none;
+  }
 
   .comments {
     padding: 0 20%;
@@ -210,6 +246,7 @@
     }
 
     .comments-testimonial1 {
+      display: unset;
       position: absolute;
       animation: testimonial1 infinite;
       animation-duration: 30s;
@@ -217,6 +254,7 @@
     }
 
     .comments-testimonial2 {
+      display: unset;
       position: absolute;
       animation: testimonial2 infinite;
       animation-duration: 30s;
@@ -224,6 +262,7 @@
     }
 
     .comments-testimonial3 {
+      display: unset;
       position: absolute;
       animation: testimonial3 infinite;
       animation-duration: 30s;
@@ -231,6 +270,7 @@
     }
 
     .comments-testimonial4 {
+      display: unset;
       position: absolute;
       animation: testimonial4 infinite;
       animation-duration: 30s;
@@ -238,6 +278,7 @@
     }
 
     .comments-testimonial5 {
+      display: unset;
       position: absolute;
       animation: testimonial5 infinite;
       animation-duration: 30s;
