@@ -142,6 +142,33 @@
     rotate: 180deg;
   }
 
+  .main-invis {
+    position: fixed;
+    top: 50%;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 4;
+    animation: navClose 2s linear;
+    display: none;
+  }
+
+  .main-invis-button1 {
+    @include white-background;
+    width: 2px;
+    height: 18px;
+    rotate: 135deg;
+  }
+
+  .main-invis-button2 {
+    @include white-background;
+    width: 2px;
+    height: 18px;
+    margin-left: -2px;
+    rotate: -135deg;
+  }
+
   .main-text {
     display: unset;
     font-size: 0.75em;
@@ -204,6 +231,16 @@
     100% {
       margin-top: 10px;
       letter-spacing: 0.1em;
+    }
+  }
+
+  @keyframes navClose {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
     }
   }
 

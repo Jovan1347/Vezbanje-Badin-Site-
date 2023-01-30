@@ -2,6 +2,10 @@
     background-color: #f9fafe;
 }
 
+@mixin nav-back-div-background {
+    background-color: rgba($color: #0e3378, $alpha: 1);
+}
+
 @mixin white-background {
     background-color: #ffffff;
 }

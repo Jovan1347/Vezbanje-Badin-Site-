@@ -22,10 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let menu = document.querySelectorAll(".menu-button");
 let menuButton = document.querySelector(".main-item");
+let invisButton = document.querySelector(".main-invis");
 let menuText = document.querySelectorAll(".main-text");
 let menuSection = document.querySelector(".menu");
 let menuContainer = document.querySelector(".menu-container");
 let menuIcons = document.querySelector(".menu-icons");
+let menuNavItems = document.querySelectorAll(".navItem");
+let menuNav = document.querySelector(".menu-navigation");
 
 menuButton.addEventListener("mouseover", () => {
   menuSection.classList.add("menuShow");
@@ -34,20 +37,38 @@ menuButton.addEventListener("mouseover", () => {
 
 menuButton.addEventListener("mouseout", () => {
   menuSection.classList.remove("menuShow");
-  menuSection.style.display = "none";
 });
 
 menuButton.addEventListener("click", () => {
   menuSection.classList.add("menuClick");
   menuSection.style.display = "unset";
-});
-
-menuButton.addEventListener("click", () => {
   menuContainer.classList.add("containerOpacity");
+  menuIcons.style.display = "unset";
+  menuButton.style.display = "none";
+  invisButton.style.display = "flex";
+  document.documentElement.style.overflow = "unset";
+  document.body.style.overflow = "hidden";
+  setTimeout(() => {
+    menuNav.style.display = "unset";
+  }, 800);
+  menuNavItems.forEach((item, index) => {
+    item.style.animation = `navShow 0.${index + 1}s ease`;
+    setTimeout(() => {
+      item.style.animation = "";
+    }, 1600);
+  });
 });
 
-menuButton.addEventListener("click", () => {
-  menuIcons.style.display = "unset";
+invisButton.addEventListener("click", () => {
+  menuSection.classList.remove("menuClick");
+  menuSection.style.display = "none";
+  menuContainer.classList.remove("containerOpacity");
+  menuIcons.style.display = "none";
+  invisButton.style.display = "none";
+  menuButton.style.display = "flex";
+  menuNav.style.display = "none";
+  document.documentElement.style.cssText = "overflow-x: hidden";
+  document.body.style.cssText = "overflow-x: hidden";
 });
 
 function beTouching(entries) {
@@ -135,7 +156,7 @@ document
       clientsContainer.style.transform = `translateX(-${x}px)`;
       x += 100;
 
-      console.log(x);
+      // console.log(x);
 
       slicedClient.forEach((item) => {
         item.classList.add("showClient");
@@ -152,4 +173,4 @@ document
     }
   });
 
-console.log(clientsContainer.scrollWidth);
+// console.log(clientsContainer.scrollWidth);
