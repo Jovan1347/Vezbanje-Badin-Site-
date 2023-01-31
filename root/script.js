@@ -153,40 +153,6 @@ setInterval(() => {
   arr.splice(7, 0, ...sliced);
 }, 3000);
 
-/* --------- T E S T I M O N I A L --------- */
-
-let clientsContainer = document.getElementById("comment-clients");
-let client = Array.from(clientsContainer.children);
-let buttonLeft = document.getElementById("button-left");
-let buttonRight = document.getElementById("button-right");
-
-let x = 0;
-document
-  .getElementById("comments-button")
-  .addEventListener("click", function (evt) {
-    let target = evt.target;
-
-    if (target.id === "button-right") {
-      let slicedClient = client.splice(0, 1);
-      clientsContainer.style.transform = `translateX(-${x}px)`;
-      x += 100;
-
-      slicedClient.forEach((item) => {
-        item.classList.add("showClient");
-      });
-    } else if (target.id === "button-left") {
-      let slicedClient = client.splice(0, 1);
-
-      slicedClient.forEach((item) => {
-        let x = 0;
-        item.style.scale = "1";
-        clientsContainer.style.transform = `translateX(${x}px)`;
-        x += 100;
-      });
-    }
-    console.log(x);
-  });
-
 /* --------- G A L L E R Y --------- */
 
 let observer = new IntersectionObserver(scrollUp);
