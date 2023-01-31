@@ -207,5 +207,63 @@ function scrollUp(entries) {
   });
 }
 
-let pictures = document.querySelectorAll(".image-wrap");
-console.log(pictures);
+let pictures = document.querySelectorAll(".gallery-image");
+let arrGallery = Array.from(pictures);
+let invisDiv = document.querySelector(".gallery-invis");
+let galleryButton = document.querySelectorAll(".image-button");
+let arrButton = Array.from(galleryButton);
+let galleryButtonRight = document.querySelector(".right");
+let galleryButtonLeft = document.querySelector(".left");
+let imageInvis = document.querySelector(".image-invis");
+let imageIndex;
+arrGallery.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    imageIndex = index;
+    invisDiv.style.display = "flex";
+    imageInvis.setAttribute("src", item.getAttribute("src"));
+    arrButton.forEach((button) => {
+      button.style.display = "unset";
+    });
+    if (imageIndex > 4) {
+      galleryButtonRight.style.display = "none";
+    }
+    if (imageIndex < 1) {
+      galleryButtonLeft.style.display = "none";
+    }
+  });
+});
+galleryButtonRight.addEventListener("click", (e) => {
+  e.stopPropagation();
+  imageInvis.setAttribute(
+    "src",
+    arrGallery[imageIndex + 1].getAttribute("src")
+  );
+
+  imageIndex++;
+  if (imageIndex > 4) {
+    galleryButtonRight.style.display = "none";
+  }
+  if (imageIndex >= 1) {
+    galleryButtonLeft.style.display = "unset";
+  }
+});
+
+galleryButtonLeft.addEventListener("click", (e) => {
+  e.stopPropagation();
+  imageInvis.setAttribute(
+    "src",
+    arrGallery[imageIndex - 1].getAttribute("src")
+  );
+
+  imageIndex--;
+  if (imageIndex < 1) {
+    galleryButtonLeft.style.display = "none";
+  }
+  if (imageIndex <= 4) {
+    galleryButtonRight.style.display = "unset";
+  }
+});
+
+invisDiv.addEventListener("click", () => {
+  invisDiv.style.display = "none";
+});
