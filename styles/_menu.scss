@@ -1,25 +1,6 @@
 @import "./font";
 @import "./colors";
 
-@mixin navigation-content {
-    font-size: 4em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 10px;
-    position: relative;
-    height: 70px;
-    left: 30px;
-    opacity: 0.5;
-
-    a {
-        z-index: 1;
-        text-decoration: none;
-        position: absolute;
-        left: 0;
-    }
-}
-
 @mixin navigation-back-div {
     @include nav-back-div-background;
     position: relative;
@@ -67,97 +48,42 @@
     width: 100px;
 }
 
-.menu-navigation-home {
-    @include navigation-content();
+.menu-navigation-item {
+    font-size: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: relative;
+    height: 70px;
+    left: 30px;
+    opacity: 0.5;
+
+    a {
+        z-index: 1;
+        text-decoration: none;
+        position: absolute;
+        left: 0;
+    }
 }
 
-.menu-navigation-home-back {
+.menu-navigation-item-back {
     @include navigation-back-div();
 }
 
-.menu-navigation-home a:hover+.menu-navigation-home-back {
-    width: 50px;
-}
-
-.menu-navigation-about {
-    @include navigation-content();
-}
-
-.menu-navigation-about-back {
-    @include navigation-back-div();
-}
-
-.menu-navigation-about a:hover+.menu-navigation-about-back {
-    width: 50px;
-}
-
-.menu-navigation-services {
-    @include navigation-content();
-}
-
-.menu-navigation-services-back {
-    @include navigation-back-div();
-}
-
-.menu-navigation-services a:hover+.menu-navigation-services-back {
-    width: 50px;
-}
-
-.menu-navigation-products {
-    @include navigation-content();
-}
-
-.menu-navigation-products-back {
-    @include navigation-back-div();
-}
-
-.menu-navigation-products a:hover+.menu-navigation-products-back {
-    width: 50px;
-}
-
-.menu-navigation-careers {
-    @include navigation-content();
-}
-
-.menu-navigation-careers-back {
-    @include navigation-back-div();
-}
-
-.menu-navigation-careers a:hover+.menu-navigation-careers-back {
-    width: 50px;
-}
-
-.menu-navigation-blog {
-    @include navigation-content();
-}
-
-.menu-navigation-blog-back {
-    @include navigation-back-div();
-}
-
-.menu-navigation-blog a:hover+.menu-navigation-blog-back {
-    width: 50px;
-}
-
-.menu-navigation-contact {
-    @include navigation-content();
-}
-
-.menu-navigation-contact-back {
-    @include navigation-back-div();
-}
-
-.menu-navigation-contact a:hover+.menu-navigation-contact-back {
+.menu-navigation-item a:hover+.menu-navigation-item-back {
     width: 50px;
 }
 
 .active-item {
     opacity: 1;
+    transition: 1s;
 }
 
 .active-item-back {
     @include navigation-back-div();
     width: 50px;
+    transition: 1s;
 }
 
 .menu-container a {
@@ -281,6 +207,6 @@
     }
 
     100% {
-        opacity: 1;
+        opacity: 0.5;
     }
 }

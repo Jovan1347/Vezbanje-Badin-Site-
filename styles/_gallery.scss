@@ -3,22 +3,40 @@
 .gallery {
   @include white-background;
   padding: 100px 5%;
+  position: relative;
+}
+
+.gallery-invis {
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  position: absolute;
+  left: -5%;
+  top: -50%;
+  width: 200vh;
+  height: 200vh;
+  z-index: 1;
+  display: none;
 }
 
 .gallery-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .inv-picture {
   display: none;
 }
 
-.gallery-div1 {
+.gallery-wrap {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  cursor: pointer;
 
   img {
     @include box-shadow;
@@ -29,7 +47,7 @@
   }
 }
 
-.gallery-div2 {
+.middle {
   display: flex;
   align-items: center;
 
@@ -41,20 +59,40 @@
   }
 }
 
-.gallery-div3 {
-  background-color: none;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.image-wrap {
+  justify-content: center;
   align-items: center;
+  display: flex;
+  height: 30%;
+  width: 100%;
+  border-radius: 20px;
+
+  .zoom {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 10%;
+    height: 5%;
+    border: none;
+    box-shadow: none;
+    pointer-events: none;
+  }
 
   img {
-    @include box-shadow;
-    height: 30%;
     width: 100%;
-    margin-bottom: 30px;
-    border-radius: 20px;
+    height: 100%;
+  }
+}
+
+.image-wrap:hover {
+  :nth-child(2) {
+    filter: brightness(50%);
+    transition: 1s;
+  }
+
+  .zoom {
+    visibility: visible;
+    transition: 1s;
   }
 }
 
@@ -62,6 +100,7 @@
 
   .gallery {
     padding: 100px 10%;
+    padding-top: 50px;
   }
 
   .gallery-container {
@@ -73,21 +112,40 @@
     display: unset;
   }
 
-  .gallery-div1 {
-    width: 30%;
-    position: relative;
-    animation: mymove 1s forwards ease;
-  }
-
-  .gallery-div2 {
-    width: 30%;
-  }
-
-  .gallery-div3 {
+  .gallery-wrap {
     width: 30%;
     justify-content: space-around;
     position: relative;
-    animation: mymove 1s forwards ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .middle {
+    height: 80%;
+    margin-top: 100px;
+
+    img {
+      height: 80%;
+
+    }
+
+  }
+
+  .zoomedIn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 30%;
+    }
+
   }
 
   @keyframes mymove {

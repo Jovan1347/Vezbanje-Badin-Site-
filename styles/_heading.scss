@@ -68,9 +68,9 @@
   align-items: center;
   border-radius: 50%;
   border: 10px solid #22252e;
-  cursor: pointer;
   z-index: 2;
   animation: backToTop 0.5s;
+  cursor: pointer;
 }
 
 #progress-value {
@@ -133,6 +133,7 @@
     rotate: 270deg;
     align-items: center;
     z-index: 4;
+    cursor: pointer;
   }
 
   .main-button {
@@ -152,6 +153,7 @@
     z-index: 4;
     animation: navClose 2s linear;
     display: none;
+    cursor: pointer;
   }
 
   .main-invis-button1 {

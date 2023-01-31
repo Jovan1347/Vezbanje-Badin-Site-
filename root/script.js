@@ -29,6 +29,8 @@ let menuContainer = document.querySelector(".menu-container");
 let menuIcons = document.querySelector(".menu-icons");
 let menuNavItems = document.querySelectorAll(".navItem");
 let menuNav = document.querySelector(".menu-navigation");
+let menuItems = document.querySelectorAll(".menu-navigation-item");
+let menuItemsBack = document.querySelectorAll(".menu-navigation-item-back");
 
 menuButton.addEventListener("mouseover", () => {
   menuSection.classList.add("menuShow");
@@ -55,9 +57,22 @@ menuButton.addEventListener("click", () => {
     item.style.animation = `navShow 0.${index + 1}s ease`;
     setTimeout(() => {
       item.style.animation = "";
-    }, 1600);
+    }, 3000);
   });
 });
+
+let menuNavItemsBack = document.querySelectorAll(".menu-navigation-item-back");
+let currentIndex = 0;
+for (let i = 0; i < menuNavItems.length; i++) {
+  menuNavItems[i].addEventListener("click", (e) => {
+    e.preventDefault();
+    menuNavItems[currentIndex].classList.remove("active-item");
+    menuNavItemsBack[currentIndex].classList.remove("active-item-back");
+    menuNavItems[i].classList.add("active-item");
+    menuNavItemsBack[i].classList.add("active-item-back");
+    currentIndex = i;
+  });
+}
 
 invisButton.addEventListener("click", () => {
   menuSection.classList.remove("menuClick");
@@ -156,8 +171,6 @@ document
       clientsContainer.style.transform = `translateX(-${x}px)`;
       x += 100;
 
-      // console.log(x);
-
       slicedClient.forEach((item) => {
         item.classList.add("showClient");
       });
@@ -171,6 +184,28 @@ document
         x += 100;
       });
     }
+    console.log(x);
   });
 
-// console.log(clientsContainer.scrollWidth);
+/* --------- G A L L E R Y --------- */
+
+let observer = new IntersectionObserver(scrollUp);
+observer.observe(document.querySelector(".gallery"));
+
+let photos = document.querySelectorAll(".movingImg");
+function scrollUp(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      photos.forEach((photo) => {
+        photo.style.animation = "mymove 0.5s ease";
+      });
+      return;
+    }
+    photos.forEach((photo) => {
+      photo.style.animation = "";
+    });
+  });
+}
+
+let pictures = document.querySelectorAll(".image-wrap");
+console.log(pictures);
